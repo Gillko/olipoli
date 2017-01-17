@@ -3,6 +3,7 @@
 	<h1>Types</h1>
 	<a href="{{ URL::to('/types/create') }}">{{ Form::button('Create', array('class' => ''))}}</a>
 	@foreach($types as $type)
+	{{-- @foreach($allModelRecords as $type) --}}
 		<p><a href="{{ URL::to('/types/' . $type->type_id) }}">{{ $type->type_id }}</a></p>
 		<p>{{ $type->type_name }}</p>
 		<p>{{ $type->type_description }}</p>
