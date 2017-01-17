@@ -25,11 +25,21 @@
 				<div class="row">
 					<div class="col-md-4">
 						<h1>Backoffice Olipoli</h1>
-						<ul class="nav nav-pills nav-stacked">
-							<li><a href="{{ url('packages') }}">Packages</a></li>
-							<li><a href="{{ url('items') }}">Items</a></li>
-							<li><a href="{{ url('types') }}">Types</a></li>
-						</ul>
+						@if (Auth::guest())
+							<ul class="nav nav-pills nav-stacked">
+								<li><a href="{{ url('packages') }}">Packages</a></li>
+								<li><a href="{{ url('items') }}">Items</a></li>
+								<li><a href="{{ url('types') }}">Types</a></li>
+							</ul>
+						@else
+							<ul class="nav nav-pills nav-stacked">
+								<li>Welcome {{ Auth::user()->user_username }}</li>
+								<li><a href="{{ url('logout') }}">Logout</a></li>
+								<li><a href="{{ url('/packages') }}">Packages</a></li>
+								<li><a href="{{ url('items') }}">Items</a></li>
+								<li><a href="{{ url('types') }}">Types</a></li>
+							</ul>
+						@endif
 					</div>
 					<div class="col-md-8">
 						@yield('content')
