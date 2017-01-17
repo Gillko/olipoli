@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-$controllerModel = 'Type';
-
 use App\Models\Type;
 use App\Models\Item;
 use App\Models\Package;
@@ -18,6 +16,23 @@ use DB;
 
 class TypeController extends Controller
 {
+	/**
+	 * Create a new controller instance.
+	 *
+	 * @return void
+	 */
+	public function __construct()
+	{
+		$this->middleware('auth', ['except' => ['store', 'destroy', 'json']]);
+	}
+	
+	/*private $allModelRecords;
+
+	public function __construct()
+    {
+        $allModelRecords = '$types';
+    }*/
+
 	/**
 	 * Display a listing of the resource.
 	 *
@@ -111,7 +126,7 @@ class TypeController extends Controller
 	{
 		$type 	= Type::findOrFail($type_id);
 
-		$items 		= Item::all()->pluck('item_description', 'item_id');
+		/*$items 		= Item::all()->pluck('item_description', 'item_id');*/
 		$packages 	= Package::all()->pluck('package_name', 'package_id');
 
 		return view('types.edit', compact('type', 'items', 'packages'));
@@ -129,7 +144,7 @@ class TypeController extends Controller
 		$type = type::findOrFail($type_id);
 		$type->update($request->all());
 
-		$type->items()->sync((array)$request->input('item_list', []));
+		/*$type->items()->sync((array)$request->input('item_list', []));*/
 		$type->packages()->sync((array)$request->input('package_list', []));
 
 		return redirect('types');
