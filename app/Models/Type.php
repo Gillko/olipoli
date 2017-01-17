@@ -15,6 +15,8 @@ class Type extends Model
 
     public $timestamps = false;
 
+    //protected $modelName = 'Type';
+
     protected $fillable = [
         'type_id',
         'type_name',
