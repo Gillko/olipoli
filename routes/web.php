@@ -15,9 +15,17 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::resource('packages', 'PackageController');
-Route::get('/packages_json', 'PackageController@json');
-Route::resource('types', 'TypeController');
-Route::get('/types_json', 'TypeController@json');
-Route::resource('items', 'ItemController');
-Route::get('/items_json', 'ItemController@json');
+/*Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');*/
+Route::get('/logout' , 'Auth\LoginController@logout');
+
+Route::group(['middleware' => 'web'], function () {
+	Route::auth();
+
+	Route::resource('packages', 'PackageController');
+	Route::get('/packages_json', 'PackageController@json');
+	Route::resource('types', 'TypeController');
+	Route::get('/types_json', 'TypeController@json');
+	Route::resource('items', 'ItemController');
+	Route::get('/items_json', 'ItemController@json');
+	Route::resource('roles', 'RoleController');
+});
