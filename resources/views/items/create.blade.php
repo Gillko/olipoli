@@ -1,6 +1,6 @@
 @extends('layouts.layoutBackoffice')
 @section('head')
-<script src="../assets/js/libraries/jquery/jquery-3.1.1.min.js"></script>
+<script src="../assets/js/libraries/jquery/jquery3.1.1.min.js"></script>
 <script>
 	$(document).ready(function(){
 		$(".addItem").click(function(){
