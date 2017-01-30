@@ -14,7 +14,14 @@ class User extends Authenticatable
 	*
 	* @var array
 	*/
-	protected $fillable = ['user_firstname', 'user_surname', 'user_fullname', 'user_username', 'email', 'password'];
+	protected $fillable = [
+		'user_firstname',
+		'user_surname',
+		'user_fullname',
+		'user_username',
+		'email',
+		'password'
+	];
 
 	protected $table ='users';
 
@@ -22,13 +29,17 @@ class User extends Authenticatable
 
 	public $timestamps = false;
 
+
+	protected $guarded = [];
+
 	/**
 	 * The attributes excluded from the model's JSON form.
 	 *
 	 * @var array
 	 */
 	protected $hidden = [
-		'password', 'remember_token',
+		'password',
+		'remember_token',
 	];
 
 	/**
@@ -36,8 +47,8 @@ class User extends Authenticatable
 	*
 	* @return \Illuminate\Database\Eloquent\Relations\HasMany
 	*/
-	public function roles()
+	/*public function roles()
 	{
-		return $this->hasMany('App\Role');
-	}
+		return $this->hasMany('App\Models\Role');
+	}*/
 }
