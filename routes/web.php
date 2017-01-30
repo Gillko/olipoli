@@ -12,7 +12,11 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
+});
+
+Route::get('/formules', function () {
+    return view('formules');
 });
 
 /*Route::get('logout', '\App\Http\Controllers\Auth\LoginController@logout');*/
@@ -27,5 +31,12 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/types_json', 'TypeController@json');
 	Route::resource('items', 'ItemController');
 	Route::get('/items_json', 'ItemController@json');
-	Route::resource('roles', 'RoleController');
+	Route::resource('navigations', 'NavigationController');
+	Route::get('/navigations_json', 'NavigationController@json');
+	Route::resource('listitems', 'ListitemController');
+	Route::get('/listitems_json', 'ListitemController@json');
+	Route::resource('contents', 'ContentController');
+	Route::get('/contents_json', 'ContentController@json');
+	Route::resource('pictures', 'PictureController');
+	Route::get('/pictures_json', 'PictureController@json');
 });
