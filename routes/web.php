@@ -39,4 +39,8 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/contents_json', 'ContentController@json');
 	Route::resource('pictures', 'PictureController');
 	Route::get('/pictures_json', 'PictureController@json');
+	Route::resource('contacts', 'ContactController');
+	Route::get('/contacts_json', 'PictureController@json');
+	Route::resource('addresses', 'AddressController');
+	Route::get('/addresses_json', 'AddressController@json');
 });
