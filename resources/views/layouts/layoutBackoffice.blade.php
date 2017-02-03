@@ -37,6 +37,8 @@
 								<li><a href="{{ url('types') }}">Types</a></li>
 								<li><a href="{{ url('contents') }}">Contents</a></li>
 								<li><a href="{{ url('pictures') }}">Pictures</a></li>
+								<li><a href="{{ url('contacts') }}">Contacts</a></li>
+								<li><a href="{{ url('addresses') }}">Addresses</a></li>
 							</ul>
 						@else
 							<ul class="nav nav-pills nav-stacked">
@@ -50,6 +52,8 @@
 								<li><a href="{{ url('types') }}">Types</a></li>
 								<li><a href="{{ url('contents') }}">Contents</a></li>
 								<li><a href="{{ url('pictures') }}">Pictures</a></li>
+								<li><a href="{{ url('contacts') }}">Contacts</a></li>
+								<li><a href="{{ url('addresses') }}">Addresses</a></li>
 							</ul>
 						@endif
 					</div>
