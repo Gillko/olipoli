@@ -24,6 +24,11 @@ angular.module('olipoli', []).config(function($interpolateProvider){
 			$scope.contents = res.data;
 		});
 
+	$http.get('http://localhost:8888/public/contacts_json')
+		.then(function(res){
+			$scope.contacts = res.data;
+		});
+
 	$http.get('http://localhost:8888/public/packages_json')
 		.then(function(res){
 			$scope.packages = res.data;

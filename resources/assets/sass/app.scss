@@ -1,9 +1,87 @@
 
 // Fonts
-@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
+//@import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
 
 // Variables
 @import "variables";
 
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+//@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+@font-face {
+	font-family: 'arimobold';
+	src: url('../fonts/arimo-bold/arimo-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/arimo-bold/arimo-bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+header{
+	background-image: url("../../uploads/oldtimer-1426422_1920.jpg");
+	height: 100%;
+	padding: 0 0 50%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+nav{
+	&.navbar-op{
+		background-color: transparent;
+		border: transparent;
+		padding-top: 50px;
+		li{
+			&.listitem-op{
+				font-family: 'arimobold';
+				font-size: 17px;
+				text-transform: uppercase;
+				&:hover{
+					&::after {
+						width: 50px;
+						border-bottom: 1px solid $main-color;
+						display: block;
+						content: "";
+						margin: 0 auto;
+					 }
+				}
+				&:active{
+					background-color: transparent;
+				}
+				a{
+					&.link-op{
+						color: $main-color;
+						&:hover{
+							background-color: transparent;
+						}
+					}
+				}
+			}	
+		}
+	}
+}
+
+@media only screen and (max-width: 768px) {
+	nav{
+		text-align: center;
+		.hero-image-op{
+			padding-bottom: 30px;
+		}
+		.navbar-collapse-op{
+			border: none;
+		}
+		button{
+			&.navbar-toggle-op{
+				float: none;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	}
+	.navbar-default{
+		.navbar-toggle {
+			&:hover{
+				background-color: $main-color;
+			}
+		}
+	}
+}
