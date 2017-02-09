@@ -60,14 +60,29 @@ nav{
 	}
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 768px){
 	nav{
 		text-align: center;
 		.hero-image-op{
 			padding-bottom: 30px;
 		}
 		.navbar-collapse-op{
-			border: none;
+			border: 0px;
+		}
+		&.navbar-op{
+			li{
+				&.listitem-op{
+					float: left;
+					&:hover{
+						a{
+							color: $black;
+						}
+						&::after {
+							border-bottom: 0px;
+						 }
+					}
+				}
+			}
 		}
 		button{
 			&.navbar-toggle-op{
@@ -77,10 +92,23 @@ nav{
 			}
 		}
 	}
-	.navbar-default{
-		.navbar-toggle {
-			&:hover{
+	.navbar-default-op{
+		.navbar-toggle-op{
+			border: 1px solid $main-color;;
+			border-radius: 0px;
+			&:hover,
+			&:focus{
 				background-color: $main-color;
+				span{
+					&.icon-bar-op{
+						background-color: $white;
+					}
+				}
+			}
+			span{
+				&.icon-bar-op{
+					background-color: $main-color;;
+				}
 			}
 		}
 	}
