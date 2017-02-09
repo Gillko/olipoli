@@ -23,7 +23,8 @@
 @endsection
 @section('content')
 	<h1>{{ $picture->picture_title }}</h1>
-	{{ Form::model($picture, ['method' => 'PUT', 'action' => ['PictureController@update', $picture->picture_id]]) }}
+	{{ Form::model($picture,['url' => '/pictures/'.$picture->picture_id, 'method' => 'PUT', 'files'=>true]) }}
+	{{-- {{ Form::model($picture, ['method' => 'PUT', 'action' => ['PictureController@update', $picture->picture_id]], 'files' => true)) }} --}}
 		{{ Form::label('picture_title', 'Title')}}
 		{{ Form::text('picture_title', null, ['class' => 'form-control']) }}
 		{{ Form::label('picture_description', 'Description')}}

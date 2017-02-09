@@ -142,10 +142,42 @@ class PictureController extends Controller
 	 */
 	public function update(Request $request, $picture_id)
 	{
-		$picture = Picture::findOrFail($picture_id);
-		$picture->update($request->all());
+		// $picture = Picture::findOrFail($picture_id);
+		// $picture->update($request->all());
 
-		return redirect('pictures');
+		// return redirect('pictures');
+
+		/*Validation*/
+		$validation = \Validator::make($request->all(), [
+			// 'image_title'		=> 'required',
+			// 'image_modified'	=> 'required'
+		]);
+
+		/*Check if it fails*/
+		if( $validation->fails() ){
+			return redirect()->back()->withInput()->with('errors', $validation->errors());
+		}
+
+		/*Process valid data & go to success page*/
+		$picture = Picture::findOrFail($picture_id);
+
+		if($request->hasFile('picture_url') ){
+		   $file 				= $request->file('picture_url');
+		   $filename 			= $file->getClientOriginalName();
+		   $destinationPath 	= public_path('uploads/');
+		   $file->move($destinationPath, $filename);
+		}
+		
+		$picture->picture_title 		= $request->input('picture_title');
+		$picture->picture_description 	= $request->input('picture_description');
+		$picture->picture_url 			= $filename;
+		$picture->picture_alt 			= $request->input('picture_alt');
+		$picture->picture_type 			= $request->input('picture_type');
+		$picture->save();
+
+		//$image->tags()->sync((array)$request->input('tag_list', []));
+
+		return redirect('/pictures')->with('message','You just updated a picture!');
 	}
 
 	/**
