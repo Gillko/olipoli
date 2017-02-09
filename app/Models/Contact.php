@@ -16,6 +16,7 @@ class Contact extends Model
     public $timestamps = false;
 
     protected $fillable = [
+        'contact_title',
         'contact_company',
         'contact_phoneA',
         'contact_phoneB',

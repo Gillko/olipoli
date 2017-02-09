@@ -11,6 +11,7 @@ use Validator;
 use Session;
 use Redirect;
 use Response;
+use DB;
 
 class ContactController extends Controller
 {
