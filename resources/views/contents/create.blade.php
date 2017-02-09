@@ -12,6 +12,8 @@
 		{{ Form::text('content_anchor', null, ['class' => 'form-control']) }}
 		{{ Form::label('content_button', 'Button')}}
 		{{ Form::text('content_button', null, ['class' => 'form-control']) }}
+		{{ Form::label('content_type', 'Type')}}
+		{{ Form::text('content_type', null, ['class' => 'form-control']) }}
 
 		{{ Form::submit('Create the Content block!', ['class' => '']) }}
 	{{ Form::close() }}

@@ -22,7 +22,8 @@ class Content extends Model
         'content_subtitle',
         'content_description',
         'content_anchor',
-        'content_button'
+        'content_button',
+        'content_type'
     ];
 
     protected $guarded = [];

@@ -84,6 +84,7 @@ class ContentController extends Controller
 			$content->content_description	= $input['content_description'];
 			$content->content_anchor		= $input['content_anchor'];
 			$content->content_button		= $input['content_button'];
+			$content->content_type			= $input['content_type'];
 
 			$content->save();
 			
