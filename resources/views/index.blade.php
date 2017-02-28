@@ -9,7 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="assets/css/app.css">
 	</head>
 	<body ng-app="olipoli">
-		<div ng-controller="mainCtrl" class="container-op">
+		<div ng-controller="mainCtrl">
 			<header>
 				<nav class="navbar navbar-default navbar-op navbar-default-op">
 				  <div class="container">
@@ -19,7 +19,7 @@
 				      	<img class="hero-image-op" ng-repeat="picture in pictures" ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" ng-if="picture.picture_type == 'logo'" />
 				      </a>
 
-				      <button type="button" class="navbar-toggle navbar-toggle-op collapsed" data-toggle="collapse" data-target="#menu-collapse" aria-expanded="false">
+				      <button type="button" class="navbar-toggle navbar-toggle-op collapsed mobile-navigation-button" data-toggle="collapse" data-target="#menu-collapse" aria-expanded="false">
 				        <span class="sr-only">Toggle navigation</span>
 				        <span class="icon-bar icon-bar-op"></span>
 				        <span class="icon-bar icon-bar-op"></span>
@@ -50,14 +50,49 @@
 				{{-- <img ng-repeat="picture in pictures" ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" ng-if="picture.picture_type == 'hero image'"></img> --}}
 			</header>
 			
-			<div class="main-content-op">
-				<div ng-repeat="content in contents" ng-if="content.content_type != 'footer'">
-					<h1 id="{[{content.content_anchor}]}">{[{content.content_title}]}</h1>
-					<h2 ng-if="content.content_subtitle != 0">{[{content.content_subtitle}]}</h2>
-					<p>{[{content.content_description}]}</p>
-					<button ng-if="content.content_button != 0">{[{content.content_button}]}</button>
-					<div ng-repeat="picture in content.pictures">
-						<img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" />
+			<div class="container">
+				<div class="content-box row">
+					<div class="col-md-12" ng-repeat="content in contents" ng-if="content.content_type == 'onze-kracht'">
+						<h1 id="{[{content.content_anchor}]}">{[{content.content_title}]}</h1>
+						<h2 ng-if="content.content_subtitle != 0">{[{content.content_subtitle}]}</h2>
+						<p class="text">{[{content.content_description}]}</p>
+						<button ng-if="content.content_button != 0">{[{content.content_button}]}</button>
+						<div ng-repeat="picture in content.pictures">
+							<img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" />
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="packages">
+				<div class="container">
+					<div ng-repeat="package in packages">
+						<h1 class="heading-package">{[{package.package_name}]}</h1>
+						<p>{[{package.package_description}]}</p>
+						<div ng-repeat="type in package.types">
+							<h2 class="subheading-package"><b>{[{type.type_name}]}</b></h2>
+							<ol ng-repeat="item in package.items" ng-if="type.type_id == item.type_id">
+								<li class="text-package">
+									{[{item.item_description}]}
+								</li>
+							</ol>
+						</div>
+						<h3 class="price-package">{[{package.package_price}]}</h3>
+						<p class="conditions-package"><small>{[{package.package_conditions}]}</small></p>
+					</div>
+				</div>
+			</div>
+
+			<div class="container">
+				<div class="content-box row">
+					<div class="col-md-12" ng-repeat="content in contents" ng-if="content.content_type != 'footer' && content.content_type != 'onze-kracht'">
+						<h1 id="{[{content.content_anchor}]}">{[{content.content_title}]}</h1>
+						<h2 ng-if="content.content_subtitle != 0">{[{content.content_subtitle}]}</h2>
+						<p class="text">{[{content.content_description}]}</p>
+						<button ng-if="content.content_button != 0">{[{content.content_button}]}</button>
+						<div ng-repeat="picture in content.pictures">
+							<img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" />
+						</div>
 					</div>
 				</div>
 
@@ -85,19 +120,6 @@
 						<img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}"></img>
 					</div>
 				</div>
-
-				{{-- <div ng-repeat="package in packages">
-					<h1>{[{package.package_name}]}</h1>
-					<p>{[{package.package_description}]}</p>
-					<div ng-repeat="type in package.types">
-						<h2>{[{type.type_name}]}</h2>
-						<div ng-repeat="item in package.items" ng-if="type.type_id == item.type_id">
-							<p>{[{item.item_description}]}</p>
-						</div>
-					</div>
-					<h3>{[{package.package_price}]}</h3>
-					<p>{[{package.package_conditions}]}</p>
-				</div> --}}
 			</div>
 			
 		</div>
