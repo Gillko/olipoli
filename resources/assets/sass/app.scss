@@ -19,10 +19,11 @@
 header{
 	background-image: url("../../uploads/oldtimer-1426422_1920.jpg");
 	height: 100%;
-	padding: 0 0 50%;
+	height: 100vh;
+	-webkit-background-size: cover;
+  	-moz-background-size: cover;
+  	-o-background-size: cover;
 	background-size: cover;
-	background-repeat: no-repeat;
-	background-attachment: fixed;
 }
 
 nav{
