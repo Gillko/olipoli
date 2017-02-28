@@ -48,6 +48,59 @@ nav.navbar-op {
       nav.navbar-op li.listitem-op a.link-op:hover {
         background-color: transparent; }
 
+.container .content-box {
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+.container h1 {
+  color: #a6c7b8;
+  text-transform: uppercase; }
+  .container h1.heading-package {
+    color: #ffffff;
+    padding-bottom: 15px;
+    border-bottom: solid 3px #ffffff; }
+
+.container h2.subheading-package {
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase; }
+
+.container h3.price-package {
+  background-color: #0c8580;
+  background-image: url("../../assets/img/price-bg.png");
+  background-repeat: no-repeat;
+  background-position: 140px 0px;
+  color: #ffffff;
+  width: 175px;
+  padding: 20px; }
+
+.container p.text {
+  white-space: pre-wrap;
+  text-align: justify;
+  border: 0px; }
+
+.container p.conditions-package {
+  color: #0c8580; }
+
+.container ol {
+  -webkit-padding-start: 15px; }
+  .container ol li {
+    list-style-type: circle; }
+    .container ol li.text-package {
+      color: #ffffff; }
+
+.container button {
+  background-color: #a6c7b8;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-transform: uppercase;
+  border-width: 0px; }
+  .container button.mobile-navigation-button {
+    background-color: transparent; }
+
+.packages {
+  background-color: #a6c7b8; }
+
 @media only screen and (max-width: 768px) {
   nav {
     text-align: center; }

@@ -61,6 +61,73 @@ nav{
 	}
 }
 
+.container{
+	.content-box{
+		padding-top: 75px;
+		padding-bottom: 75px;
+	}
+	h1{
+		color: $main-color;
+		text-transform: uppercase;
+		&.heading-package{
+			color: $white;
+			padding-bottom: 15px;
+			border-bottom: solid 3px $white;
+		}
+	}
+	h2{
+		&.subheading-package{
+			color: $white;
+			font-size: 15px;
+			text-transform: uppercase;
+		}
+	}
+	h3{
+		&.price-package{
+			background-color: $sub-color;
+			background-image: url('../../assets/img/price-bg.png');
+			background-repeat: no-repeat;
+			background-position: 140px 0px;
+			color: $white;
+			width: 175px;
+			padding: 20px;
+		}
+	}
+	p{
+		&.text{
+			white-space: pre-wrap;
+			text-align: justify;
+			border: 0px;
+		}
+		&.conditions-package{
+			color: $sub-color;
+		}
+	}
+	ol{
+	    -webkit-padding-start: 15px;
+		li{
+			list-style-type: circle;
+			&.text-package{
+				color: $white;
+			}
+		}
+	}
+	button{
+		background-color: $main-color;
+		color: $white;
+		padding: 10px 20px 10px 20px;
+		text-transform: uppercase;
+		border-width: 0px;
+		&.mobile-navigation-button{
+			background-color: transparent;
+		}
+	}
+}
+
+.packages{
+	background-color: $main-color;
+}
+
 @media only screen and (max-width: 768px){
 	nav{
 		text-align: center;
