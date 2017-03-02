@@ -1,11 +1,14 @@
 <!doctype html>
-<html>
+<html class="no-js">
 	<head>
 		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title>Olipoli</title>
+		<script src="assets/modernizr.js"></script>
 		<script type="text/javascript" src="assets/js/libraries/jquery/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="assets/js/libraries/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="assets/css/libraries/bootstrap/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="assets/reset.css">
 		<link rel="stylesheet" type="text/css" href="assets/css/app.css">
 	</head>
 	<body ng-app="olipoli">
@@ -64,7 +67,7 @@
 				</div>
 			</div>
 
-			<div class="packages">
+			{{-- <div class="packages">
 				<div class="container">
 					<div ng-repeat="package in packages">
 						<h1 class="heading-package">{[{package.package_name}]}</h1>
@@ -81,7 +84,97 @@
 						<p class="conditions-package"><small>{[{package.package_conditions}]}</small></p>
 					</div>
 				</div>
+			</div> --}}
+
+			<div class="packages">
+				<div class="container">
+					<div class="cd-slider-wrapper">
+						<ul class="cd-slider">
+							<li class="is-visible">
+								<div class="cd-half-block image"></div>
+								<div class="cd-half-block content content-1">
+									<div ng-repeat="package in packages" ng-if="package.package_id == 1">
+										@include('includes.package')
+									</div>
+								</div>
+							</li> <!-- .cd-half-block.content -->
+
+							<li>
+								<div class="cd-half-block image"></div>
+
+								<div class="cd-half-block content">
+									<div ng-repeat="package in packages" ng-if="package.package_id == 2">
+										@include('includes.package')
+									</div>
+								</div> <!-- .cd-half-block.content -->
+							</li>
+
+							<li>
+								<div class="cd-half-block image"></div>
+
+								<div class="cd-half-block content">
+									<div ng-repeat="package in packages" ng-if="package.package_id == 3">
+										@include('includes.package')
+									</div>
+								</div> <!-- .cd-half-block.content -->
+							</li>
+
+							<li>
+								<div class="cd-half-block image"></div>
+
+								<div class="cd-half-block content">
+									<div ng-repeat="package in packages" ng-if="package.package_id == 4">
+										@include('includes.package')
+									</div>
+								</div> <!-- .cd-half-block.content -->
+							</li>
+							<li>
+								<div class="cd-half-block image"></div>
+
+								<div class="cd-half-block content">
+									<div ng-repeat="package in packages" ng-if="package.package_id == 5">
+										@include('includes.package')
+									</div>
+								</div> <!-- .cd-half-block.content -->
+							</li>
+						</ul> <!-- .cd-slider -->
+					</div> <!-- .cd-slider-wrapper -->
+				</div>
 			</div>
+
+			{{-- <div class="packages">
+				<div class="container">
+					<div class="cd-slider-wrapper">
+						<ul class="cd-slider">
+							<li class="is-visible">
+								<div ng-repeat="package in packages" ng-if="package.package_id == '1'">
+									@include('includes.package')
+								</div>
+							</li> <!-- .cd-half-block.content -->
+							<li>
+								<div ng-repeat="package in packages" ng-if="package.package_id == '2'">
+									@include('includes.package')
+								</div>
+							</li>
+							<li>
+								<div ng-repeat="package in packages" ng-if="package.package_id == '3'">
+									@include('includes.package')
+								</div>
+							</li>
+							<li>
+								<div ng-repeat="package in packages" ng-if="package.package_id == '4'">
+									@include('includes.package')
+								</div>
+							</li>
+							<li>
+								<div ng-repeat="package in packages" ng-if="package.package_id == '5'">
+									@include('includes.package')
+								</div>
+							</li>
+						</ul> <!-- .cd-slider -->
+					</div> <!-- .cd-slider-wrapper -->
+				</div>
+			</div> --}}
 
 			<div class="container">
 				<div class="content-box row">
@@ -125,5 +218,9 @@
 		</div>
 		<script src="assets/js/libraries/angular/angular.js" type="text/javascript"></script>
 		<script src="assets/js/angular.js" type="text/javascript"></script>
+
+		<script src="assets/jquery-2.1.4.js"></script>
+		<script src="assets/jquery.mobile.custom.min.js"></script>
+		<script src="assets/js/libraries/pointy-slider/main.js"></script> <!-- Resource jQuery -->
 	</body>
 </html>

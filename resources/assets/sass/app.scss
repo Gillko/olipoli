@@ -4,6 +4,7 @@
 
 // Variables
 @import "variables";
+@import "pointy-slider";
 
 // Bootstrap
 //@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
@@ -21,8 +22,8 @@ header{
 	height: 100%;
 	height: 100vh;
 	-webkit-background-size: cover;
-  	-moz-background-size: cover;
-  	-o-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
 	background-size: cover;
 }
 
@@ -56,7 +57,7 @@ nav{
 						}
 					}
 				}
-			}	
+			}   
 		}
 	}
 }
@@ -71,9 +72,17 @@ nav{
 		text-transform: uppercase;
 		&.heading-package{
 			color: $white;
-			padding-bottom: 15px;
-			border-bottom: solid 3px $white;
 		}
+	}
+	span{
+		&.line{
+			border-bottom: solid 3px $white;
+			width: 75%;
+			display:block;
+		}
+	}
+	.package-styles-op{
+		padding-top: 50px;
 	}
 	h2{
 		&.subheading-package{
@@ -104,11 +113,12 @@ nav{
 		}
 	}
 	ol{
-	    -webkit-padding-start: 15px;
+		-webkit-padding-start: 15px;
 		li{
 			list-style-type: circle;
 			&.text-package{
 				color: $white;
+				position: inherit;
 			}
 		}
 	}
@@ -127,6 +137,83 @@ nav{
 .packages{
 	background-color: $main-color;
 }
+
+/* Override pointy slider */
+@media only screen and (min-width: 900px){
+	.cd-slider-wrapper {
+		padding: 0px;
+	}
+}
+
+@media only screen and (min-width: 1170px){
+	.cd-slider .content {
+	    padding: 0px;
+	    padding-top: 75px;
+	    display: block;
+	}
+}
+
+/* .cd-slider-wrapper {
+    height: 1000px;
+    
+} */
+
+.content-1{
+	height: 300px;
+}
+
+.cd-slider {
+	.content{
+		background-color: $main-color;
+	}
+	li:nth-of-type(2) .content {
+		background-color: $main-color;
+	}
+
+	li:nth-of-type(3) .content {
+		background-color: $main-color;
+	}
+
+	li:nth-of-type(4) .content {
+		background-color: $main-color;
+	}
+}
+
+.cd-slider-navigation {
+    left: 62%;
+    transform: translateX(-50%);
+    bottom: 0px;
+}
+
+@media only screen and (max-width: 1199px){
+	.cd-slider-navigation {
+	    left: 64.5%;
+	}
+}
+
+@media only screen and (max-width: 991px){
+	.cd-slider-navigation {
+	    left: 66.7%;
+	}
+}
+
+@media only screen and (min-width: 900px){
+	.cd-slider-navigation {
+	    background-color: $sub-color;
+	}
+}
+
+@media only screen and (min-width: 900px){
+	.cd-slider-navigation li.selected a {
+	    color: $white;
+	}
+	.cd-slider-navigation a {
+	    color: $gray;
+	    font-weight: 700;
+	}
+}
+
+/* End Override pointy slider */
 
 @media only screen and (max-width: 768px){
 	nav{
@@ -162,7 +249,7 @@ nav{
 	}
 	.navbar-default-op{
 		.navbar-toggle-op{
-			border: 1px solid $main-color;;
+			border: 1px solid $main-color;
 			border-radius: 0px;
 			&:hover,
 			&:focus{
