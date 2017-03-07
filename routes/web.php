@@ -43,4 +43,6 @@ Route::group(['middleware' => 'web'], function () {
 	Route::get('/contacts_json', 'ContactController@json');
 	Route::resource('addresses', 'AddressController');
 	Route::get('/addresses_json', 'AddressController@json');
+	Route::resource('socials', 'SocialController');
+	Route::get('/socials_json', 'SocialController@json');
 });
