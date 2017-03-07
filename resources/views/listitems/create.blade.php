@@ -22,6 +22,8 @@
 		{{ Form::textarea('listitem_description', null, ['class' => 'form-control']) }}
 		{{ Form::label('listitem_anchor', 'Anchor')}}
 		{{ Form::text('listitem_anchor', null, ['class' => 'form-control']) }}
+		{{ Form::label('listitem_position', 'Position')}}
+		{{ Form::text('listitem_position', null, ['class' => 'form-control']) }}
 
 		{{-- <div class="form-group">
 			{{ Form::button('Add another Item', ['class' => 'addItem form-control']) }}

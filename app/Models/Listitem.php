@@ -19,6 +19,7 @@ class Listitem extends Model
         'listitem_title',
         'listitem_description',
         'listitem_anchor',
+        'listitem_position',
         'navigation_id'
     ];
 

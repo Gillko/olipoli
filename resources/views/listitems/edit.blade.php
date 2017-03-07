@@ -10,6 +10,8 @@
 		{{ Form::text('listitem_description', null, ['class' => 'form-control']) }}
 		{{ Form::label('listitem_anchor', 'Anchor')}}
 		{{ Form::text('listitem_anchor', null, ['class' => 'form-control']) }}
+		{{ Form::label('listitem_position', 'Position')}}
+		{{ Form::text('listitem_position', null, ['class' => 'form-control']) }}
 		
 		{{ Form::submit('Edit the Listitem!', array('class' => '')) }}
 	{{ Form::close() }}

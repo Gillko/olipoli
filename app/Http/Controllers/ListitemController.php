@@ -67,6 +67,7 @@ class ListitemController extends Controller
 			'listitem_title' 		=> 'required',
 			'listitem_description' 	=> 'required',
 			'listitem_anchor' 		=> 'required',
+			'listitem_position' 	=> 'required',
 		);
 
 		/*Run the validation rules on the inputs from the form*/
@@ -79,6 +80,7 @@ class ListitemController extends Controller
 			$listitem->listitem_title			= $input['listitem_title'];
 			$listitem->listitem_description		= $input['listitem_description'];
 			$listitem->listitem_anchor			= $input['listitem_anchor'];
+			$listitem->listitem_position		= $input['listitem_position'];
 			$listitem->navigation_id			= Input::get('navigation_id'); 
 
 			$listitem->save();
