@@ -86,7 +86,7 @@
 				</div>
 			</div> --}}
 
-			<div class="packages">
+			<div class="packages" id="formules">
 				<div class="container">
 					<div class="cd-slider-wrapper">
 						<ul class="cd-slider">
@@ -97,8 +97,7 @@
 										@include('includes.package')
 									</div>
 								</div>
-							</li> <!-- .cd-half-block.content -->
-
+							</li>
 							<li>
 								<div class="cd-half-block image"></div>
 
@@ -106,9 +105,8 @@
 									<div ng-repeat="package in packages" ng-if="package.package_id == 2">
 										@include('includes.package')
 									</div>
-								</div> <!-- .cd-half-block.content -->
+								</div>
 							</li>
-
 							<li>
 								<div class="cd-half-block image"></div>
 
@@ -116,9 +114,8 @@
 									<div ng-repeat="package in packages" ng-if="package.package_id == 3">
 										@include('includes.package')
 									</div>
-								</div> <!-- .cd-half-block.content -->
+								</div>
 							</li>
-
 							<li>
 								<div class="cd-half-block image"></div>
 
@@ -126,7 +123,7 @@
 									<div ng-repeat="package in packages" ng-if="package.package_id == 4">
 										@include('includes.package')
 									</div>
-								</div> <!-- .cd-half-block.content -->
+								</div>
 							</li>
 							<li>
 								<div class="cd-half-block image"></div>
@@ -135,46 +132,12 @@
 									<div ng-repeat="package in packages" ng-if="package.package_id == 5">
 										@include('includes.package')
 									</div>
-								</div> <!-- .cd-half-block.content -->
+								</div>
 							</li>
-						</ul> <!-- .cd-slider -->
-					</div> <!-- .cd-slider-wrapper -->
+						</ul>
+					</div>
 				</div>
 			</div>
-
-			{{-- <div class="packages">
-				<div class="container">
-					<div class="cd-slider-wrapper">
-						<ul class="cd-slider">
-							<li class="is-visible">
-								<div ng-repeat="package in packages" ng-if="package.package_id == '1'">
-									@include('includes.package')
-								</div>
-							</li> <!-- .cd-half-block.content -->
-							<li>
-								<div ng-repeat="package in packages" ng-if="package.package_id == '2'">
-									@include('includes.package')
-								</div>
-							</li>
-							<li>
-								<div ng-repeat="package in packages" ng-if="package.package_id == '3'">
-									@include('includes.package')
-								</div>
-							</li>
-							<li>
-								<div ng-repeat="package in packages" ng-if="package.package_id == '4'">
-									@include('includes.package')
-								</div>
-							</li>
-							<li>
-								<div ng-repeat="package in packages" ng-if="package.package_id == '5'">
-									@include('includes.package')
-								</div>
-							</li>
-						</ul> <!-- .cd-slider -->
-					</div> <!-- .cd-slider-wrapper -->
-				</div>
-			</div> --}}
 
 			<div class="container">
 				<div class="content-box row">
