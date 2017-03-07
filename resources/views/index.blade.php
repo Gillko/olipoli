@@ -8,7 +8,8 @@
 		<script type="text/javascript" src="assets/js/libraries/jquery/jquery-3.1.1.min.js"></script>
 		<script type="text/javascript" src="assets/js/libraries/bootstrap/bootstrap.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="assets/css/libraries/bootstrap/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="assets/reset.css">
+		<link rel="stylesheet" type="text/css" href="assets/css/libraries/fontawesome/font-awesome.css">
+		{{-- <link rel="stylesheet" type="text/css" href="assets/reset.css"> --}}
 		<link rel="stylesheet" type="text/css" href="assets/css/app.css">
 	</head>
 	<body ng-app="olipoli">
@@ -146,8 +147,8 @@
 						<h2 ng-if="content.content_subtitle != 0">{[{content.content_subtitle}]}</h2>
 						<p class="text">{[{content.content_description}]}</p>
 						<button ng-if="content.content_button != 0">{[{content.content_button}]}</button>
-						<div ng-repeat="picture in content.pictures">
-							<img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" />
+						<div class="pictures" ng-repeat="picture in content.pictures">
+							<img class="picture" ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" />
 						</div>
 					</div>
 				</div>
@@ -168,15 +169,31 @@
 						<p>{[{address.address_longitude}]}</p>
 					</div>
 				</div>
+			</div>
 
-				<div ng-repeat="content in contents" ng-if="content.content_type == 'footer'">
-					<p>{[{content.content_title}]}</p>
-					<p>{[{content.content_description}]}/<p>
-					<div ng-repeat="picture in content.pictures">
-						<img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}"></img>
+			<footer ng-repeat="content in contents" ng-if="content.content_type == 'footer'">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="text-left">
+								<p>{[{content.content_title}]}</p>
+								{{-- <p ng-if="content.content_description != 0">{[{content.content_description}]}/<p> --}}
+							</div>
+						</div>
+						<div class="col-md-6 col-sm-6 col-xs-6">
+							<div class="text-right">
+								<a href="https://www.facebook.com/OlipoliDrongen" target="_blank">
+									<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
+								</a>
+								<div ng-repeat="picture in content.pictures">
+
+									{{-- <img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}"></img>
+								</div> --}}
+							</div>
+						</div>
 					</div>
 				</div>
-			</div>
+			</footer>
 			
 		</div>
 		<script src="assets/js/libraries/angular/angular.js" type="text/javascript"></script>

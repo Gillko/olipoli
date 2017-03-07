@@ -64,8 +64,13 @@ nav{
 
 .container{
 	.content-box{
-		padding-top: 75px;
-		padding-bottom: 75px;
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+	img{
+		&.picture{
+			width: 50%;
+		}
 	}
 	h1{
 		color: $main-color;
@@ -136,6 +141,23 @@ nav{
 
 .packages{
 	background-color: $main-color;
+}
+
+footer{
+	background-color: $black;
+	color: $white;
+
+	p{
+		padding-top: 15px;
+	}
+
+	i{
+		width: 20px;
+		padding-top: 10px;
+		&:hover{
+			color: $main-color;
+		}
+	}
 }
 
 /* Override pointy slider */
