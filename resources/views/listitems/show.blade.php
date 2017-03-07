@@ -5,6 +5,7 @@
 	<p>{{ $listitem->listitem_title }}</p>
 	<p>{{ $listitem->listitem_description }}</p>
 	<p>{{ $listitem->listitem_anchor }}</p>
+	<p>{{ $listitem->listitem_position }}</p>
 	
 	<p>Navigation:</p>
 	<p>{{ $listitem->navigation->navigation_title }}</p>
