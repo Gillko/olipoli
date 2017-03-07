@@ -32,7 +32,7 @@
 				    </div>
 
 				    <div class="collapse navbar-collapse navbar-right navbar-collapse-op" id="menu-collapse">
-				    	<ul ng-repeat="listitem in listitems" class="nav navbar-nav">
+				    	<ul ng-repeat="listitem in listitems | orderBy : 'listitem_position'" class="nav navbar-nav">
 							<li class="listitem-op">
 								<a href="{[{listitem.listitem_anchor}]}" class="link-op">{[{listitem.listitem_title}]}</a>
 							</li>
@@ -60,7 +60,9 @@
 						<h1 id="{[{content.content_anchor}]}">{[{content.content_title}]}</h1>
 						<h2 ng-if="content.content_subtitle != 0">{[{content.content_subtitle}]}</h2>
 						<p class="text">{[{content.content_description}]}</p>
-						<button ng-if="content.content_button != 0">{[{content.content_button}]}</button>
+						<a href="{[{content.content_buttonAnchor}]}" class="link-op">
+							<button ng-if="content.content_button != 0">{[{content.content_button}]}</button>
+						</a>
 						<div ng-repeat="picture in content.pictures">
 							<img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}" />
 						</div>
@@ -142,7 +144,7 @@
 
 			<div class="container">
 				<div class="content-box row">
-					<div class="col-md-12" ng-repeat="content in contents" ng-if="content.content_type != 'footer' && content.content_type != 'onze-kracht'">
+					<div class="col-md-12" ng-repeat="content in contents | orderBy : 'content_position'" ng-if="content.content_type != 'footer' && content.content_type != 'onze-kracht'">
 						<h1 id="{[{content.content_anchor}]}">{[{content.content_title}]}</h1>
 						<h2 ng-if="content.content_subtitle != 0">{[{content.content_subtitle}]}</h2>
 						<p class="text">{[{content.content_description}]}</p>
@@ -182,13 +184,11 @@
 						</div>
 						<div class="col-md-6 col-sm-6 col-xs-6">
 							<div class="text-right">
-								<a href="https://www.facebook.com/OlipoliDrongen" target="_blank">
-									<i class="fa fa-facebook-official fa-2x" aria-hidden="true"></i>
-								</a>
-								<div ng-repeat="picture in content.pictures">
-
-									{{-- <img ng-src="uploads/{[{picture.picture_url}]}" alt="{[{picture.picture_alt}]}"></img>
-								</div> --}}
+								<div class="socials" ng-repeat="social in content.socials">
+									<a href="{[{social.social_link}]}" target="_blank">
+										<i class="fa {[{social.social_fontawesome}]} fa-2x" aria-hidden="true"></i>
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -201,6 +201,6 @@
 
 		<script src="assets/jquery-2.1.4.js"></script>
 		<script src="assets/jquery.mobile.custom.min.js"></script>
-		<script src="assets/js/libraries/pointy-slider/main.js"></script> <!-- Resource jQuery -->
+		<script src="assets/js/libraries/pointy-slider/main.js"></script>
 	</body>
 </html>
