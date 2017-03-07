@@ -9,6 +9,8 @@
 		<p>{{ $content->content_description }}</p>
 		<p>{{ $content->content_anchor }}</p>
 		<p>{{ $content->content_button }}</p>
+		<p>{{ $content->content_buttonAnchor }}</p>
+		<p>{{ $content->content_position }}</p>
 		<p>{{ $content->content_type }}</p>
 		<p>{{ Form::open(array('url' => 'contents/' . $content->content_id, 'class' => '')) }}
 	@endforeach

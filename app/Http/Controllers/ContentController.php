@@ -69,6 +69,7 @@ class ContentController extends Controller
 			'content_description' 		=> 'required',
 			'content_anchor'			=> 'required',
 			//'content_button' 			=> 'required',
+			'content_position'			=> 'required'
 		);
 
 		/*Run the validation rules on the inputs from the form*/
@@ -84,6 +85,8 @@ class ContentController extends Controller
 			$content->content_description	= $input['content_description'];
 			$content->content_anchor		= $input['content_anchor'];
 			$content->content_button		= $input['content_button'];
+			$content->content_buttonAnchor	= $input['content_buttonAnchor'];
+			$content->content_position		= $input['content_position'];
 			$content->content_type			= $input['content_type'];
 
 			$content->save();
@@ -156,7 +159,7 @@ class ContentController extends Controller
 	 /*JSON action (to use in the Frontoffice with AngularJS*/
 	public function json()
 	{
-		$content = Content::with('pictures')->get();
+		$content = Content::with('pictures')->with('socials')->get();
 
 		//return Response::json($content)->setCallback(Input::get('callback'));
 		//return response()->json($data=['contents' => $content], $status=200, $headers=[], $options=JSON_PRETTY_PRINT);

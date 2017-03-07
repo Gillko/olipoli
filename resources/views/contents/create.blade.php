@@ -12,6 +12,10 @@
 		{{ Form::text('content_anchor', null, ['class' => 'form-control']) }}
 		{{ Form::label('content_button', 'Button')}}
 		{{ Form::text('content_button', null, ['class' => 'form-control']) }}
+		{{ Form::label('content_buttonAnchor', 'Button Anchor')}}
+		{{ Form::text('content_buttonAnchor', null, ['class' => 'form-control']) }}
+		{{ Form::label('content_position', 'Position')}}
+		{{ Form::text('content_position', null, ['class' => 'form-control']) }}
 		{{ Form::label('content_type', 'Type')}}
 		{{ Form::text('content_type', null, ['class' => 'form-control']) }}
 

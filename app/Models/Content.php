@@ -23,6 +23,8 @@ class Content extends Model
         'content_description',
         'content_anchor',
         'content_button',
+        'content_buttonAnchor',
+        'content_position',
         'content_type'
     ];
 
@@ -31,5 +33,10 @@ class Content extends Model
     public function pictures()
     {
         return $this->hasMany('App\Models\Picture');
+    }
+
+    public function socials()
+    {
+        return $this->hasMany('App\Models\Social');
     }
 }
