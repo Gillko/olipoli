@@ -22,6 +22,7 @@ class Contact extends Model
         'contact_phoneB',
         'contact_email',
         'contact_information',
+        'contact_button',
         'contact_anchor'
     ];
 

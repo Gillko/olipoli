@@ -70,6 +70,7 @@ class ContactController extends Controller
 			 'contact_phoneA'		=> 'required',
 			 'contact_email'		=> 'required',
 			 'contact_information'	=> 'required',
+			 'contact_button'		=> 'required',
 			 'contact_anchor'		=> 'required'
 		);
 
@@ -86,6 +87,7 @@ class ContactController extends Controller
 			$contact->contact_phoneB			= $input['contact_phoneB'];
 			$contact->contact_email				= $input['contact_email'];
 			$contact->contact_information		= $input['contact_information'];
+			$contact->contact_button			= $input['contact_button'];
 			$contact->contact_anchor			= $input['contact_anchor'];
 
 			$contact->save();

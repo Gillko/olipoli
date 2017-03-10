@@ -14,6 +14,8 @@
 		{{ Form::text('contact_email', null, ['class' => 'form-control']) }}
 		{{ Form::label('contact_information', 'Information')}}
 		{{ Form::text('contact_information', null, ['class' => 'form-control']) }}
+		{{ Form::label('contact_button', 'Button')}}
+		{{ Form::text('contact_button', null, ['class' => 'form-control']) }}
 		{{ Form::label('contact_anchor', 'Anchor')}}
 		{{ Form::text('contact_anchor', null, ['class' => 'form-control']) }}
 

@@ -8,6 +8,7 @@
 	<p>{{ $contact->contact_phoneB }}</p>
 	<p>{{ $contact->contact_email }}</p>
 	<p>{{ $contact->contact_information }}</p>
+	<p>{{ $contact->contact_button }}</p>
 	<p>{{ $contact->contact_anchor }}</p>
 
 	<a href="{{ URL::to('/contacts/' . $contact->contact_id . '/edit') }}">{{ Form::button('Edit', array('class' => 'button succes'))}}</a>

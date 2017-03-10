@@ -10,6 +10,7 @@
 		<p>{{ $contact->contact_phoneB }}</p>
 		<p>{{ $contact->contact_email }}</p>
 		<p>{{ $contact->contact_information }}</p>
+		<p>{{ $contact->contact_button }}</p>
 		<p>{{ $contact->contact_anchor }}</p>
 		<p>{{ Form::open(array('url' => 'contacts/' . $contact->contact_id, 'class' => '')) }}
 	@endforeach
