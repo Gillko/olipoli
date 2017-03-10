@@ -1,10 +1,10 @@
 /*angular.module("olipoli", function($interpolateProvider) {
-        $interpolateProvider.startSymbol('<%');
-        $interpolateProvider.endSymbol('%>');
-    })*/
+		$interpolateProvider.startSymbol('<%');
+		$interpolateProvider.endSymbol('%>');
+	})*/
 
 angular.module('olipoli', []).config(function($interpolateProvider){
-    $interpolateProvider.startSymbol('{[{').endSymbol('}]}');
+	$interpolateProvider.startSymbol('{[{').endSymbol('}]}');
 })
 
 .controller('mainCtrl', function($scope, $http){
