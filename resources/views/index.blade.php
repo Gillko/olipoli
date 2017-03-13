@@ -101,6 +101,22 @@
 									</div>
 								</div>
 							</li>
+							<li>
+								<div class="cd-half-block image"></div>
+								<div class="cd-half-block content">
+									<div ng-repeat="package in packages" ng-if="package.package_id == 6">
+										@include('includes.package')
+									</div>
+								</div>
+							</li>
+							<li>
+								<div class="cd-half-block image"></div>
+								<div class="cd-half-block content">
+									<div ng-repeat="package in packages" ng-if="package.package_id == 7">
+										@include('includes.package')
+									</div>
+								</div>
+							</li>
 						</ul>
 					</div>
 				</div>
