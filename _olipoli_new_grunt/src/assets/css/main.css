@@ -1,0 +1,238 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'arimobold';
+  src: url("../fonts/arimo-bold/arimo-bold-webfont.woff2") format("woff2"), url("../fonts/arimo-bold/arimo-bold-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+header {
+  background-image: url("../img/oldtimer-header.jpg");
+  height: 100%;
+  height: 100vh;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover; }
+
+nav.navbar-op {
+  background-color: transparent;
+  border: transparent;
+  padding-top: 50px; }
+  nav.navbar-op img.hero-image-op {
+    width: 175px;
+    height: 175px; }
+  nav.navbar-op li.listitem-op {
+    font-family: 'arimobold';
+    font-size: 17px;
+    text-transform: uppercase; }
+    nav.navbar-op li.listitem-op:hover::after {
+      width: 50px;
+      border-bottom: 1px solid #a6c7b8;
+      display: block;
+      content: "";
+      margin: 0 auto; }
+    nav.navbar-op li.listitem-op:active {
+      background-color: transparent; }
+    nav.navbar-op li.listitem-op a.link-op {
+      color: #a6c7b8; }
+      nav.navbar-op li.listitem-op a.link-op:hover {
+        background-color: transparent; }
+
+.container .content-box {
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+.container .content-box-last {
+  padding-bottom: 0px; }
+
+.container .content-box-multiple-op {
+  padding-top: 75px;
+  padding-bottom: 75px; }
+
+.container img.picture {
+  width: 100%;
+  padding-bottom: 10px; }
+
+.container h1 {
+  color: #a6c7b8;
+  text-transform: uppercase;
+  margin: 0;
+  padding-bottom: 25px; }
+  .container h1.heading-package {
+    color: #ffffff; }
+
+.container span.line {
+  border-bottom: solid 3px #ffffff;
+  width: 50%;
+  display: block; }
+
+.container span.line-passie-kennis {
+  border-bottom: solid 3px #ffffff;
+  width: 50%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px; }
+
+.container h2.subheading-package {
+  color: #ffffff;
+  font-size: 15px;
+  text-transform: uppercase; }
+
+.container h3.price-package {
+  background-color: #0c8580;
+  background-image: url("../img/price-bg.png");
+  background-repeat: no-repeat;
+  background-position: 225px 0px;
+  background-size: 36px 66px;
+  color: #ffffff;
+  width: 260px;
+  padding: 18px; }
+
+.container p {
+  margin: 0;
+  padding-bottom: 25px; }
+  .container p.text {
+    white-space: pre-wrap;
+    text-align: justify;
+    border: 0px; }
+
+.container a.button {
+  background-color: #a6c7b8;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-transform: uppercase;
+  border-width: 0px; }
+  .container a.button.mobile-navigation-button {
+    background-color: transparent; }
+  .container a.button:hover {
+    background-color: #c2c2c2; }
+  .container a.button.load-more {
+    margin: 0 auto;
+    display: block;
+    width: 50%; }
+
+.container .contact-information p {
+  line-height: 0px; }
+  .container .contact-information p.uppercase {
+    text-transform: uppercase; }
+  .container .contact-information p.main-color {
+    color: #a6c7b8; }
+  .container .contact-information p.bold {
+    font-weight: bold; }
+
+.container .contact-information span.main-color {
+  color: #a6c7b8; }
+
+.container .contact-information span.bold {
+  font-weight: bold; }
+
+.container .contact-information button {
+  background-color: #a6c7b8;
+  color: #ffffff;
+  padding: 10px 20px 10px 20px;
+  text-transform: uppercase;
+  border-width: 0px; }
+  .container .contact-information button.contact-button {
+    background-color: #c2c2c2; }
+  .container .contact-information button:hover {
+    background-color: #ffffff;
+    color: #a6c7b8; }
+
+.container #map {
+  height: 418px; }
+
+.packages {
+  background-color: #a6c7b8; }
+  .packages h1 {
+    margin: 0;
+    padding-bottom: 0; }
+  .packages p {
+    padding-bottom: 0;
+    line-height: 25px;
+    color: #ffffff; }
+    .packages p.package-description-op {
+      padding-top: 10px; }
+    .packages p.conditions-package, .packages p.package-description-op {
+      width: 100%;
+      color: #0c8580; }
+    .packages p.item-op:before {
+      content: "•  "; }
+
+.passieENkennis {
+  background-color: #a6c7b8; }
+  .passieENkennis h1 {
+    color: #ffffff;
+    text-align: center;
+    padding-bottom: 0px; }
+  .passieENkennis p.text {
+    color: #ffffff;
+    text-align: center; }
+
+.b2b p.text {
+  padding: 0; }
+
+.contact {
+  background-color: #a6c7b8;
+  color: #ffffff; }
+  .contact h1 {
+    color: #ffffff; }
+
+footer {
+  background-color: #000000;
+  color: #ffffff; }
+  footer p {
+    padding: 0;
+    padding-top: 20px; }
+  footer a {
+    padding: 10px 10px 0 10px; }
+    footer a:active, footer a:hover, footer a:focus {
+      color: #a6c7b8; }
+  footer i {
+    width: 20px;
+    padding-top: 10px;
+    color: #ffffff; }
+    footer i:hover {
+      color: #a6c7b8; }
+
+@media only screen and (max-width: 991px) {
+  .container {
+    width: 100%; }
+  button.contact-information {
+    margin-bottom: 20px; }
+  button.contact-button {
+    margin-bottom: 20px; } }
+
+@media only screen and (max-width: 779px) {
+  nav.navbar-op li.listitem-op {
+    font-size: 16px; } }
+
+@media only screen and (max-width: 767px) {
+  nav {
+    text-align: center; }
+    nav .navbar-collapse-op {
+      border: 0px; }
+    nav.navbar-op li.listitem-op {
+      float: center;
+      font-size: 17px; }
+      nav.navbar-op li.listitem-op:hover a {
+        color: #000000; }
+      nav.navbar-op li.listitem-op:hover::after {
+        border-bottom: 0px; }
+      nav.navbar-op li.listitem-op a.link-op {
+        background-color: rgba(0, 0, 0, 0.4); }
+    nav button.navbar-toggle-op {
+      background-color: #a6c7b8;
+      float: none;
+      margin: 0 auto;
+      display: block; }
+  .navbar-default-op .navbar-toggle-op {
+    border: 1px solid #a6c7b8;
+    border-radius: 0px; }
+    .navbar-default-op .navbar-toggle-op:hover, .navbar-default-op .navbar-toggle-op:focus {
+      background-color: #a6c7b8; }
+      .navbar-default-op .navbar-toggle-op:hover span.icon-bar-op, .navbar-default-op .navbar-toggle-op:focus span.icon-bar-op {
+        background-color: #ffffff; }
+    .navbar-default-op .navbar-toggle-op span.icon-bar-op {
+      background-color: #a6c7b8;
+      background-color: #ffffff; } }

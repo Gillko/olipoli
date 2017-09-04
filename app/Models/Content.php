@@ -25,6 +25,7 @@ class Content extends Model
         'content_button',
         'content_buttonAnchor',
         'content_position',
+        'content_background',
         'content_type'
     ];
 

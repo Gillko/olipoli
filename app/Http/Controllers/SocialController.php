@@ -127,7 +127,7 @@ class SocialController extends Controller
 	 */
 	public function update(Request $request, $social_id)
 	{
-		$social = Social::findOrFail($navigation_id);
+		$social = Social::findOrFail($social_id);
 		$social->update($request->all());
 
 		return redirect('socials');

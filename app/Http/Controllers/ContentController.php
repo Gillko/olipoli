@@ -69,7 +69,8 @@ class ContentController extends Controller
 			'content_description' 		=> 'required',
 			'content_anchor'			=> 'required',
 			//'content_button' 			=> 'required',
-			'content_position'			=> 'required'
+			'content_position'			=> 'required',
+			'content_background'		=> 'required',
 		);
 
 		/*Run the validation rules on the inputs from the form*/
@@ -87,6 +88,7 @@ class ContentController extends Controller
 			$content->content_button		= $input['content_button'];
 			$content->content_buttonAnchor	= $input['content_buttonAnchor'];
 			$content->content_position		= $input['content_position'];
+			$content->content_background	= $input['content_background'];
 			$content->content_type			= $input['content_type'];
 
 			$content->save();

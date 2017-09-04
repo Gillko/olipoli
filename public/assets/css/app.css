@@ -259,10 +259,12 @@ nav.navbar-op {
   padding-bottom: 0px; }
 
 .container .content-box-multiple-op {
-  padding-top: 75px; }
+  padding-top: 75px;
+  padding-bottom: 75px; }
 
 .container img.picture {
-  width: 100%; }
+  width: 100%;
+  padding-bottom: 10px; }
 
 .container h1 {
   color: #a6c7b8;
@@ -274,8 +276,16 @@ nav.navbar-op {
 
 .container span.line {
   border-bottom: solid 3px #ffffff;
-  width: 75%;
+  width: 50%;
   display: block; }
+
+.container span.line-passie-kennis {
+  border-bottom: solid 3px #ffffff;
+  width: 50%;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 25px; }
 
 .container h2.subheading-package {
   color: #ffffff;
@@ -286,10 +296,10 @@ nav.navbar-op {
   background-color: #0c8580;
   background-image: url("../../assets/img/price-bg.png");
   background-repeat: no-repeat;
-  background-position: 205px 0px;
+  background-position: 258px 0px;
   color: #ffffff;
-  width: 240px;
-  padding: 20px; }
+  width: 293px;
+  padding: 18px; }
 
 .container p {
   margin: 0;
@@ -308,8 +318,11 @@ nav.navbar-op {
   .container button.mobile-navigation-button {
     background-color: transparent; }
   .container button:hover {
-    background-color: #000000;
-    color: #a6c7b8; }
+    background-color: #c2c2c2; }
+  .container button.load-more {
+    margin: 0 auto;
+    display: block;
+    width: 50%; }
 
 .container .contact p {
   line-height: 0px; }
@@ -326,6 +339,13 @@ nav.navbar-op {
 .container .contact span.bold {
   font-weight: bold; }
 
+.container .contact button.contact {
+  background-color: #c2c2c2; }
+
+.container .contact button:hover {
+  background-color: #ffffff;
+  color: #a6c7b8; }
+
 .container #map {
   height: 418px; }
 
@@ -336,7 +356,8 @@ nav.navbar-op {
     padding-bottom: 0; }
   .packages p {
     padding-bottom: 0;
-    line-height: 25px; }
+    line-height: 25px;
+    color: #ffffff; }
     .packages p.package-description-op {
       padding-top: 10px; }
     .packages p.conditions-package, .packages p.package-description-op {
@@ -360,67 +381,11 @@ footer {
     footer i:hover {
       color: #a6c7b8; }
 
-/* Override pointy slider */
-@media only screen and (min-width: 900px) {
-  .cd-slider-wrapper {
-    padding: 0px; } }
-
-@media only screen and (min-width: 1170px) {
-  .cd-slider .content {
-    padding: 0px;
-    padding-top: 75px;
-    display: block; } }
-
-.cd-slider-wrapper {
-  height: 1100px; }
-
-.content-1 {
-  height: 300px; }
-
-.cd-slider .content {
-  background-color: #a6c7b8; }
-
-.cd-slider li:nth-of-type(2) .content {
-  background-color: #a6c7b8; }
-
-.cd-slider li:nth-of-type(3) .content {
-  background-color: #a6c7b8; }
-
-.cd-slider li:nth-of-type(4) .content {
-  background-color: #a6c7b8; }
-
-.cd-slider-navigation {
-  font-family: 'arimobold';
-  left: 58.8%;
-  bottom: 0px;
-  padding: 0;
-  margin: 0;
-  background-color: rgba(12, 133, 128, 0.5);
-  height: 40px; }
-  .cd-slider-navigation li {
-    margin: 0; }
-    .cd-slider-navigation li.selected {
-      background-color: #0c8580; }
-    .cd-slider-navigation li a:focus, .cd-slider-navigation li a:hover {
-      text-decoration: none; }
-
-@media only screen and (max-width: 1199px) {
-  .cd-slider-navigation {
-    left: 61.3%; } }
-
 @media only screen and (max-width: 991px) {
-  .cd-slider-navigation {
-    left: 63.5%; } }
+  button.contact {
+    margin-bottom: 20px; } }
 
-@media only screen and (min-width: 900px) {
-  .cd-slider-navigation li.selected a {
-    color: #ffffff; }
-  .cd-slider-navigation a {
-    color: #c2c2c2;
-    font-weight: 700; } }
-
-/* End Override pointy slider */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 771px) {
   nav {
     text-align: center; }
     nav .hero-image-op {
@@ -428,7 +393,10 @@ footer {
     nav .navbar-collapse-op {
       border: 0px; }
     nav.navbar-op li.listitem-op {
-      float: left; }
+      float: center; }
+      nav.navbar-op li.listitem-op a.link-op {
+        color: #000000;
+        text-shadow: 2px 2px #FFF; }
       nav.navbar-op li.listitem-op:hover a {
         color: #000000; }
       nav.navbar-op li.listitem-op:hover::after {
