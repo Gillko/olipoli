@@ -9,6 +9,7 @@
 	<p>{{ $content->content_button }}</p>
 	<p>{{ $content->content_buttonAnchor }}</p>
 	<p>{{ $content->content_position }}</p>
+	<p>{{ $content->content_background }}</p>
 
 	<a href="{{ URL::to('/contents/' . $content->content_id . '/edit') }}">{{ Form::button('Edit', array('class' => 'button succes'))}}</a>
 	{{ Form::open(array('url' => 'contents/' . $content->content_id, 'class' => '')) }}

@@ -16,6 +16,8 @@
 		{{ Form::text('content_buttonAnchor', null, ['class' => 'form-control']) }}
 		{{ Form::label('content_position', 'Position')}}
 		{{ Form::text('content_position', null, ['class' => 'form-control']) }}
+		{{ Form::label('content_background', 'Background')}}
+		{{ Form::text('content_background', null, ['class' => 'form-control']) }}
 		{{ Form::label('content_type', 'Type')}}
 		{{ Form::text('content_type', null, ['class' => 'form-control']) }}
 
