@@ -1,0 +1,29 @@
+@import "imports/variables";
+
+nav{
+	.test{
+		padding-top: 10px;
+	}
+	.testTwo{
+		padding-bottom: $test;
+	}
+	.testThree{
+		padding-top: $testTwo;
+	}
+}
+p.testFour{
+	color: red;
+}
+
+p.testFive{
+	color: red;
+}
+
+p.testSix{
+	color: red;
+}
+
+p.testSix{
+	padding: $testThree;
+	color: red;
+}
