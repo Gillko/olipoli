@@ -1,0 +1,35 @@
+/*--- FONTS ---*/
+
+//Helvetica Neue Condensed Bold (Helvetica Neue Lt Std 77 Bold Condensed)
+@font-face {
+	font-family: 'helvetica-neuebold';
+	src: url('../fonts/helvetica-neue-condensed-bold/HelveticaNeue-CondensedBold.eot');
+	src: url('../fonts/helvetica-neue-condensed-bold/HelveticaNeue-CondensedBold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/helvetica-neue-condensed-bold/HelveticaNeue-CondensedBold.woff2') format('woff2'),
+		url('../fonts/helvetica-neue-condensed-bold/HelveticaNeue-CondensedBold.woff') format('woff'),
+		url('../fonts/helvetica-neue-condensed-bold/HelveticaNeue-CondensedBold.ttf') format('truetype'),
+		url('../fonts/helvetica-neue-condensed-bold/HelveticaNeue-CondensedBold.svg#HelveticaNeue-CondensedBold') format('svg');
+	font-weight: bold;
+	font-style: normal;
+}
+
+//Arimo Bold
+@font-face {
+	font-family: 'arimobold';
+	src: url('../fonts/arimo-bold/arimo-bold-webfont.woff2') format('woff2'),
+		 url('../fonts/arimo-bold/arimo-bold-webfont.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+$helvetica-N-B:		'helvetica-neuebold';
+$arimo-B:			'arimobold';
+
+/*--- COLORS ---*/
+
+$main-color:	#a6c7b8;
+$sub-color:		#0c8580;
+$white:			#ffffff;
+$black:			#000000;
+$gray:			#666666;

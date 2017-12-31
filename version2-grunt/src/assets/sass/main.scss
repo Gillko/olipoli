@@ -1,0 +1,747 @@
+// Variables
+@import "imports/variables";
+.no-padding-right-op{
+	padding-right: 0px;
+}
+.background{
+	height: 650px;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+.container-fluid{
+	margin-left: 20%;
+	margin-right: 20%;
+	&.container-fluid-no-offset-right-op{
+		margin-right: 0%;
+		padding-right: 0%;
+	}
+}
+.main-background{
+	background-color: $main-color;
+}
+.title-site-information{
+	font-size: 45px;
+}
+span{
+	&.site-information-op{
+		font-style: italic;
+		text-decoration: underline;
+	    cursor: pointer;
+	}
+}
+.text-site-information-op{
+	color: $white;
+	a{
+		color: $sub-color;
+		text-decoration: underline;
+	}
+}
+header{
+	background-image: url("../img/oldtimer-header.jpg");
+	height: 100%;
+	height: 100vh;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.logo-olipoli-op{
+	position: absolute;
+}
+nav{
+	&.navbar-op{
+		background-color: transparent;
+		border: transparent;
+		padding-top: 50px;
+		img.hero-image-op{
+			width: 175px;
+			height: 175px;
+		}
+		li{
+			&.listitem-op{
+				font-family: $helvetica-N-B;
+				font-size: 24px;
+				text-transform: uppercase;
+				&:hover{
+					border-bottom: 1px solid $main-color;
+				}
+				&:active{
+					background-color: transparent;
+				}
+				a{
+					&.link-op{
+						color: $main-color;
+						&:hover{
+							background-color: transparent;
+						}
+					}
+				}
+			}   
+		}
+	}
+}
+.content-box{
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+.content-box-no-padding-top{
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+.content-box-no-margin-right{
+	margin-right: 0px;
+}
+.content-box-multiple-op{
+	padding-top: 75px;
+	padding-bottom: 75px;
+}
+img{
+	&.picture-op{
+		display: block;
+		margin: 0 auto;
+		padding-top: 75px;
+	}
+}
+.package-title-op{
+	padding-bottom: 45px;
+}
+h1{
+	font-family: $helvetica-N-B;
+	font-size: 54px;
+	color: $main-color;
+	text-transform: uppercase;
+	margin: 0;
+	padding-bottom: 25px;
+	&.heading-package{
+		color: $sub-color;
+	}
+}
+span{
+	&.line{
+		border-bottom: solid 3px $sub-color;
+		width: 50%;
+		display:block;
+	}
+	&.line-passie-kennis{
+		border-bottom: solid 3px $white;
+		width: 50%;
+		display:block;
+		text-align: center;
+		margin: 0 auto;
+		margin-bottom: 25px;
+	}
+}
+h2{
+	&.subheading-package{
+		font-family: arial;
+		font-weight: bold;
+		color: $white;
+		font-size: 16px;
+		text-transform: uppercase;
+	}
+}
+h3{
+	&.price-package{
+		font-family: $helvetica-N-B;
+		font-weight: bold;
+		font-size: 30px;
+		text-transform: uppercase;
+		color: $white;
+		border: solid 4px $white;
+		padding: 15px;
+		margin-top: 30px;
+		/* background-color: $sub-color;
+		color: $white;
+		background-image: url('../img/price-bg.png');
+		background-repeat: no-repeat;
+		background-size: 36px 66px;
+		padding: 18px;
+		line-height: 31px;
+		margin: 12px 0 8px;
+		background-color: transparent; */
+		&.pro-wash{
+			/* background-position: 255px 0px;
+			width: 290px; */
+			width: 160px;
+		}
+		&.pro-wash-wax,
+		&.basic,
+		&.premium,
+		&.interior,
+		&.season{
+			/* background-position: 415px 0px;
+			width: 450px; */
+			width: 236px;
+		}
+		&.vip,
+		&.oldtimer{
+			/* background-position: 495px 0px;
+			width: 530px; */
+			width: 300px;
+		}
+		&.headlight{
+			/* background-position: 565px 0px;
+			width: 600px; */
+			width: 315px;
+		}
+	}
+}
+p{
+	margin: 0;
+	padding-bottom: 25px;
+	&.text{
+		font-family: arial;
+		font-size: 16px;
+		color: $gray;
+		white-space: pre-wrap;
+		text-align: justify;
+		border: 0px;
+	}
+}
+.button-wrapper{
+	padding-top: 25px;
+	padding-bottom: 40px;
+}
+a.button,
+.button{
+	font-family: $helvetica-N-B;
+	font-size: 24px;
+	background-color: $main-color;
+	color: $white;
+	padding: 15px 40px 15px 40px;
+	text-transform: uppercase;
+	border-width: 0px;
+	&.mobile-navigation-button{
+		background-color: transparent;
+	}
+	&:hover{
+		background-color: $gray;
+		text-decoration: none;
+	}
+	&.load-more{
+		margin: 0 auto;
+		display: block;
+		width: 50%;
+	}
+	&.read-more{
+		background-color: transparent;
+		color: $white;
+		border: solid 4px $white;
+		padding: 10px 50px 10px 50px;
+		margin-top: 15px;
+	}
+	&.more-pictures-op{
+		background-color: #ccc;
+	}
+}
+.button{
+	background-color: $white;
+	color: $main-color;
+}
+.contact-information{
+	p{
+		line-height: 0px;
+		&.uppercase{
+			text-transform: uppercase;
+		}
+		&.main-color{
+			color: $main-color;
+		}
+		&.bold{
+			font-weight: bold;
+		}
+		&.text{
+			&.main-color{
+				color: $main-color;
+			}
+		}	
+	}
+	span{
+		&.main-color{
+			color: $main-color;
+		}
+		&.bold{
+			font-weight: bold;
+		}
+	}
+	button{
+		background-color: $main-color;
+		color: $white;
+		padding: 10px 20px 10px 20px;
+		text-transform: uppercase;
+		border-width: 0px;
+		&.contact-button{
+			background-color: $gray;
+		}
+		&:hover{
+			background-color: $white;
+			color: $main-color;
+		}
+	}
+}
+.information-padding-top-op{
+	padding-top: 125px;
+}
+#map {
+	height: 550px;
+}
+.packages{
+	background-color: $main-color;
+	.package{
+		padding-top: 75px;
+		height: 650px;
+	}
+	.package-more{
+		padding-top: 0px;
+		height: auto;
+	}
+	h1{
+		margin: 0;
+		padding-bottom: 0;
+	}
+	p{
+		padding-bottom: 0;
+		line-height: 25px;
+		color: $white;
+		&.package-description-op{
+			font-family: arial;
+			font-weight: bold;
+			padding-top: 10px;
+		}
+		&.conditions-package,
+		&.package-description-op{
+			font-family: arial;
+			width: 100%;
+			color: $sub-color;
+		}
+		&.conditions-package{
+			color: $white;
+		}
+	}
+	ul{
+		&.list-wrapper-op{
+			-webkit-padding-start: 16px;
+		}
+		li{
+			padding-bottom: 0;
+			line-height: 25px;
+			color: $white;
+			&.item-op{
+				font-family: arial;
+				font-size: 14px;
+			}
+		}
+	}
+}
+.passieENkennis{
+	background-color: $main-color;
+	h1{
+		color: $white;
+		text-align: center;
+		padding-bottom: 0px;
+	}
+	p{
+		&.text{
+			color: $white;
+			text-align: center;
+		}
+	}
+}
+.b2b{
+	p{
+		&.text{
+			padding: 0;
+		}
+	}
+}
+.contact{
+	h1{
+		color: $main-color;
+	}
+	p{
+		span{
+			color: $main-color;
+		}
+		&.text{
+			color: $gray;
+			a{
+				text-decoration: none;
+				color: $gray;
+			}
+		}
+	}
+	.contact-part{
+		padding-bottom: 25px;
+	}
+}
+iframe{
+	width: 100%;
+	border: 0;
+	overflow: hidden;
+	margin-bottom: 50px;
+}
+.more-pictures-op{
+	text-align: center;
+	a{
+		padding-left: 300px;
+		padding-right: 300px;
+	}
+}
+footer{
+	font-family: $helvetica-N-B;
+	background-color: $sub-color;
+	color: $white;
+	p{
+		font-size: 24px;
+		padding:0;
+		padding-top: 20px;
+	}
+	a{
+		padding: 10px 10px 0 10px;
+		&:active,
+		&:hover,
+		&:focus{
+			color: $main-color;
+		}
+	}
+	i{
+		width: 20px;
+		padding: 15px;
+		color: $white;
+		&:hover{
+			color: $main-color;
+		}
+	}
+}
+.modal{
+	&.in{
+		.modal-dialog-op{
+			.modal-content-op{
+				background-color: $main-color;
+				height: 100%;
+				border-radius: 0px;
+				border: 0px;
+				.close-op{
+					color: $white;
+					font-size: 35px;
+					font-family: arial;
+					font-weight: 100;
+					border: solid 1px $white;
+					padding: 3px 10px;
+					opacity: 1;
+				}
+			}
+			.modal-body-op{
+				padding: 50px 100px 100px 100px;
+			}
+		}
+	}
+}
+.modal-header-op{
+	border: none;
+	padding-bottom: 0px;
+}
+.modal-body-op{
+	padding-top: 0px;
+}
+/*package numbers*/
+.carousel-indicators-op{
+	left: 0%;
+	bottom: 0px;
+	margin-left: 0px;
+	width: auto;
+	margin-bottom: 0px;
+	-webkit-padding-start: 0px;
+	li{
+		float: left;
+		padding: 0px;
+		margin: 0px;
+		text-indent: 0;
+		width: 60px;
+		height: 60px;
+		border: none;
+		border-radius: 0%;
+		line-height: 60px;
+		color: #b7b3b2;
+		background-color: rgba(38, 114, 110, 0.8);
+		font-size: 20px;
+		font-weight: bold;
+		&.active,
+		&.active:hover{
+			width: 60px;
+			height: 60px;
+			background-color: #0c8580;
+			opacity: 1;
+			color: #fff;
+		}
+	}
+}
+.background-image-one{
+	background-image: url('../../assets/img/olipoli-pro-wash.jpg');
+}
+.background-image-two{
+	background-image: url('../../assets/img/olipoli-pro-wash-wax.jpg');
+}
+.background-image-three{
+	background-image: url('../../assets/img/olipoli-basic.jpg');
+}
+.background-image-four{
+	background-image: url('../../assets/img/olipoli-premium.jpg');
+}
+.background-image-five{
+	background-image: url('../../assets/img/olipoli-interior.jpg');
+}
+.background-image-six{
+	background-image: url('../../assets/img/olipoli-season.jpg');
+}
+.background-image-seven{
+	background-image: url('../../assets/img/olipoli-vip.jpg');
+}
+.background-image-eight{
+	background-image: url('../../assets/img/olipoli-polijsten-van-koplampen.jpg');
+}
+.background-image-nine{
+	background-image: url('../../assets/img/olipoli-oldtimers.jpg');
+}
+/*package numbers*/
+@media only screen and (max-width: 1800px){
+	.container-fluid{
+		margin-left: 5%;
+		margin-right: 5%;
+	}
+}
+@media only screen and (max-width: 1153px){
+	.carousel-indicators li{
+		display: block;
+		float: none;
+	}
+}
+@media only screen and (max-width: 1105px){
+	.container-fluid{
+		&.container-fluid-navigation-op{
+			margin-left: 0%;
+			margin-right: 0%;
+		}
+	}
+	.navbar-right{
+		padding-left: 0px;
+		ul{
+			li{
+				a{
+					font-size: 20px;
+				}
+			}
+		}
+	}
+	nav{
+		&.navbar-op{
+			li{
+				&.listitem-op{
+					a{
+						&:first-child{
+							padding-left: 0px;
+						}
+						&:hover{
+							color: $black;
+						}
+					}
+					&:hover{
+						&::after {
+							width: 0px;
+						 }
+					}
+				}
+			}
+		}
+	}
+}
+@media only screen and (max-width: 991px){
+	.navbar-right{
+		padding-left: 0px;
+		ul{
+			li{
+				a{
+					font-size: 15px;
+				}
+			}
+		}
+	}
+	.container-fluid {
+		&.container-fluid-no-margin-left-op{
+			margin-left: 0%;
+		}
+		.no-padding-left-mobile-op{
+			padding-left: 0px;
+		}
+	}
+	img{
+		&.picture-op{
+			padding-top: 0px;
+			padding-bottom: 75px;
+			width: 100%;
+		}
+	}
+	.button{
+		&.button-contact-per-email-op{
+			font-size: 20px;
+			padding: 15px;
+		}
+	}
+	button{
+		&.contact-information{
+			margin-bottom: 20px;
+		}
+		&.contact-button{
+			margin-bottom: 20px;
+		}
+	}
+	.more-pictures-op {
+		a{
+			padding-left: 30px;
+			padding-right: 30px;
+		}
+	}
+	#map{
+		margin-top: 30px;
+	}
+	.information-padding-top-op {
+		padding-top: 75px;
+	}
+	.packages{
+		.package-pro-wash{
+			height: 750px;
+		}
+		.package-pro-wash-wax{
+			height: 850px;
+		}
+		.package-basic{
+			height: 900px;
+		}
+		.package-premium{
+			height: 900px;
+		}
+		.package-interior{
+			height: 950px;
+		}
+		.package-season{
+			height: 900px;
+		}
+		.package-vip{
+			height: 950px;
+		}
+		.package-headlight{
+			height: 750px;
+		}
+		.package-oldtimers{
+			height: 600px;
+		}
+	}
+	.margin-left-mobile-op{
+		margin-left: 5%;
+	}
+	.modal{
+		&.in{
+			.modal-dialog-op{
+				width: 90%;
+			}
+		}
+	}
+	.modal{
+		&.in{
+			.modal-dialog-op{
+				width: 90%;
+				.modal-body-op{
+					padding: 25px;
+				}
+			}
+		}
+	}
+	h3{
+		&.price-package{
+			&.smaller{
+				font-size: 23px;
+				width: 250px;
+			}
+		}
+	}
+	#referenties{
+		font-size: 50px;
+	}
+	footer{
+		p{
+			font-size: 13px;
+		}
+		.fa-3x {
+		    font-size: 2em;
+		}
+		i {
+		    padding: 15px 5px 5px 5px;
+		}
+	}
+}
+@media only screen and (max-width: 767px){
+	.navbar-collapse{
+		-webkit-box-shadow: none;
+    	box-shadow: none;
+	}
+	nav{
+		text-align: center;
+		.navbar-collapse-op{
+			border: 0px;
+		}
+		&.navbar-op{
+			li{
+				&.listitem-op{
+					float: center;
+					font-size: 17px;
+					&:hover{
+						border-bottom: 0px solid;
+						a{
+							color: $black;
+						}
+						&::after {
+							border-bottom: 0px;
+						 }
+					}
+					a{
+						&.link-op{
+							background-color: rgba(0, 0, 0, 0.4);
+						}
+					}	
+				}
+			}
+		}
+		button{
+			&.navbar-toggle-op{
+				background-color: $main-color;
+				float: none;
+				margin: 0 auto;
+				display: block;
+			}
+		}
+	}
+	.navbar-default-op{
+		.navbar-toggle-op{
+			border: 1px solid $main-color;
+			border-radius: 0px;
+			&:hover,
+			&:focus{
+				background-color: $main-color;
+				span{
+					&.icon-bar-op{
+						background-color: $white;
+					}
+				}
+			}
+			span{
+				&.icon-bar-op{
+					background-color: $main-color;
+					background-color: $white;
+				}
+			}
+		}
+	}
+	iframe{
+		margin-bottom: 25px;
+	}
+}
