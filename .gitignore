@@ -1,4 +1,6 @@
-/node_modules
+version1-laravel-angular/node_modules/
+version1-laravel-angular/vendor/
+version2-grunt/node_modules/
 /public/storage
 /storage/*.key
 /vendor
