@@ -4,7 +4,7 @@
 	padding-right: 0px;
 }
 .background{
-	height: 650px;
+	height: 670px;
 	background-size: cover;
 	background-repeat: no-repeat;
 }
@@ -119,7 +119,7 @@ h1{
 span{
 	&.line{
 		border-bottom: solid 3px $sub-color;
-		width: 50%;
+		width: 10%;
 		display:block;
 	}
 	&.line-passie-kennis{
@@ -162,7 +162,7 @@ h3{
 		&.pro-wash{
 			/* background-position: 255px 0px;
 			width: 290px; */
-			width: 160px;
+			width: 210px;
 		}
 		&.pro-wash-wax,
 		&.basic,
@@ -182,7 +182,11 @@ h3{
 		&.headlight{
 			/* background-position: 565px 0px;
 			width: 600px; */
-			width: 315px;
+			width: 375px;
+		}
+		small{
+			font-size: 14px;
+			color: $white;
 		}
 	}
 }
@@ -237,6 +241,9 @@ a.button,
 .button{
 	background-color: $white;
 	color: $main-color;
+	&:focus{
+		outline: none !important;
+	}
 }
 .contact-information{
 	p{
@@ -429,6 +436,9 @@ footer{
 					border: solid 1px $white;
 					padding: 3px 10px;
 					opacity: 1;
+					&:focus{
+						outline: none !important;
+					}
 				}
 			}
 			.modal-body-op{
@@ -486,16 +496,20 @@ footer{
 	background-image: url('../../assets/img/olipoli-basic.jpg');
 }
 .background-image-four{
-	background-image: url('../../assets/img/olipoli-premium.jpg');
-}
-.background-image-five{
+	/*background-image: url('../../assets/img/olipoli-premium.jpg');*/
 	background-image: url('../../assets/img/olipoli-interior.jpg');
 }
+.background-image-five{
+	/*background-image: url('../../assets/img/olipoli-interior.jpg');*/
+	background-image: url('../../assets/img/olipoli-vip.jpg');
+}
 .background-image-six{
-	background-image: url('../../assets/img/olipoli-season.jpg');
+	/*background-image: url('../../assets/img/olipoli-season.jpg');*/
+	background-image: url('../../assets/img/olipoli-polijsten-van-koplampen.jpg');	
 }
 .background-image-seven{
-	background-image: url('../../assets/img/olipoli-vip.jpg');
+	/*background-image: url('../../assets/img/olipoli-vip.jpg');*/
+	background-image: url('../../assets/img/olipoli-oldtimers.jpg');
 }
 .background-image-eight{
 	background-image: url('../../assets/img/olipoli-polijsten-van-koplampen.jpg');
@@ -608,32 +622,44 @@ footer{
 		padding-top: 75px;
 	}
 	.packages{
+		.package-pro-wash,
+		.package-pro-wash-wax,
+		.package-basic,
+		.package-premium,
+		.package-interior,
+		.package-season,
+		.package-vip,
+		.package-headlight,
+		.package-oldtimers{
+			height: auto;
+			padding-bottom: 30px;
+		}
 		.package-pro-wash{
-			height: 750px;
+			/*height: 750px;*/
 		}
 		.package-pro-wash-wax{
-			height: 850px;
+			/*height: 850px;*/
 		}
 		.package-basic{
-			height: 900px;
+			/*height: 900px;*/
 		}
 		.package-premium{
-			height: 900px;
+			/*height: 900px;*/
 		}
 		.package-interior{
-			height: 950px;
+			/*height: 950px;*/
 		}
 		.package-season{
-			height: 900px;
+			/*height: 900px;*/
 		}
 		.package-vip{
-			height: 950px;
+			/*height: 950px;*/
 		}
 		.package-headlight{
-			height: 750px;
+			/*height: 750px;*/
 		}
 		.package-oldtimers{
-			height: 600px;
+			/*height: 600px;*/
 		}
 	}
 	.margin-left-mobile-op{

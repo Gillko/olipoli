@@ -17,7 +17,7 @@
   padding-right: 0px; }
 
 .background {
-  height: 650px;
+  height: 670px;
   background-size: cover;
   background-repeat: no-repeat; }
 
@@ -112,7 +112,7 @@ h1 {
 
 span.line {
   border-bottom: solid 3px #0c8580;
-  width: 50%;
+  width: 10%;
   display: block; }
 
 span.line-passie-kennis {
@@ -151,7 +151,7 @@ h3.price-package {
   h3.price-package.pro-wash {
     /* background-position: 255px 0px;
 			width: 290px; */
-    width: 160px; }
+    width: 210px; }
   h3.price-package.pro-wash-wax, h3.price-package.basic, h3.price-package.premium, h3.price-package.interior, h3.price-package.season {
     /* background-position: 415px 0px;
 			width: 450px; */
@@ -163,7 +163,10 @@ h3.price-package {
   h3.price-package.headlight {
     /* background-position: 565px 0px;
 			width: 600px; */
-    width: 315px; }
+    width: 375px; }
+  h3.price-package small {
+    font-size: 14px;
+    color: #ffffff; }
 
 p {
   margin: 0;
@@ -215,6 +218,8 @@ a.button,
 .button {
   background-color: #ffffff;
   color: #a6c7b8; }
+  .button:focus {
+    outline: none !important; }
 
 .contact-information p {
   line-height: 0px; }
@@ -358,6 +363,8 @@ footer {
     border: solid 1px #ffffff;
     padding: 3px 10px;
     opacity: 1; }
+    .modal.in .modal-dialog-op .modal-content-op .close-op:focus {
+      outline: none !important; }
 
 .modal.in .modal-dialog-op .modal-body-op {
   padding: 50px 100px 100px 100px; }
@@ -408,16 +415,20 @@ footer {
   background-image: url("../../assets/img/olipoli-basic.jpg"); }
 
 .background-image-four {
-  background-image: url("../../assets/img/olipoli-premium.jpg"); }
-
-.background-image-five {
+  /*background-image: url('../../assets/img/olipoli-premium.jpg');*/
   background-image: url("../../assets/img/olipoli-interior.jpg"); }
 
+.background-image-five {
+  /*background-image: url('../../assets/img/olipoli-interior.jpg');*/
+  background-image: url("../../assets/img/olipoli-vip.jpg"); }
+
 .background-image-six {
-  background-image: url("../../assets/img/olipoli-season.jpg"); }
+  /*background-image: url('../../assets/img/olipoli-season.jpg');*/
+  background-image: url("../../assets/img/olipoli-polijsten-van-koplampen.jpg"); }
 
 .background-image-seven {
-  background-image: url("../../assets/img/olipoli-vip.jpg"); }
+  /*background-image: url('../../assets/img/olipoli-vip.jpg');*/
+  background-image: url("../../assets/img/olipoli-oldtimers.jpg"); }
 
 .background-image-eight {
   background-image: url("../../assets/img/olipoli-polijsten-van-koplampen.jpg"); }
@@ -478,24 +489,35 @@ footer {
     margin-top: 30px; }
   .information-padding-top-op {
     padding-top: 75px; }
-  .packages .package-pro-wash {
-    height: 750px; }
-  .packages .package-pro-wash-wax {
-    height: 850px; }
-  .packages .package-basic {
-    height: 900px; }
-  .packages .package-premium {
-    height: 900px; }
-  .packages .package-interior {
-    height: 950px; }
-  .packages .package-season {
-    height: 900px; }
-  .packages .package-vip {
-    height: 950px; }
-  .packages .package-headlight {
-    height: 750px; }
+  .packages .package-pro-wash,
+  .packages .package-pro-wash-wax,
+  .packages .package-basic,
+  .packages .package-premium,
+  .packages .package-interior,
+  .packages .package-season,
+  .packages .package-vip,
+  .packages .package-headlight,
   .packages .package-oldtimers {
-    height: 600px; }
+    height: auto;
+    padding-bottom: 30px; }
+  .packages .package-pro-wash {
+    /*height: 750px;*/ }
+  .packages .package-pro-wash-wax {
+    /*height: 850px;*/ }
+  .packages .package-basic {
+    /*height: 900px;*/ }
+  .packages .package-premium {
+    /*height: 900px;*/ }
+  .packages .package-interior {
+    /*height: 950px;*/ }
+  .packages .package-season {
+    /*height: 900px;*/ }
+  .packages .package-vip {
+    /*height: 950px;*/ }
+  .packages .package-headlight {
+    /*height: 750px;*/ }
+  .packages .package-oldtimers {
+    /*height: 600px;*/ }
   .margin-left-mobile-op {
     margin-left: 5%; }
   .modal.in .modal-dialog-op {
