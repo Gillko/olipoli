@@ -36,6 +36,13 @@
   .container-fluid.container-fluid-no-offset-right-op {
     margin-right: 0%;
     padding-right: 0%; }
+  @media only screen and (max-width: 767px) {
+    .container-fluid.container-fluid-header, .container-fluid.container-fluid-video {
+      margin-left: 0%;
+      margin-right: 0%; }
+    .container-fluid .col-md-12-video {
+      padding-right: 0px;
+      padding-left: 0px; } }
 
 .main-background {
   background-color: #a6c7b8; }
@@ -118,6 +125,10 @@ h1 {
   padding-bottom: 25px; }
   h1.heading-package {
     color: #0c8580; }
+  h1.h1-t-a-c {
+    text-align: center; }
+  h1.h1-white {
+    color: #ffffff; }
 
 span.line {
   border-bottom: solid 3px #0c8580;
@@ -222,6 +233,10 @@ a.button,
   a.button.more-pictures-op,
   .button.more-pictures-op {
     background-color: #ccc; }
+  a.button.download-pdf-op,
+  .button.download-pdf-op {
+    background-color: #ffffff;
+    color: #000000; }
 
 .button {
   background-color: #ffffff;
@@ -309,6 +324,9 @@ a.button,
     color: #ffffff;
     text-align: center; }
 
+.coatings {
+  background-color: #000000; }
+
 .b2b p.text {
   padding: 0; }
 
@@ -338,6 +356,12 @@ iframe {
   .more-pictures-op a {
     padding-left: 300px;
     padding-right: 300px; }
+
+.download-pdf-op {
+  text-align: center; }
+  .download-pdf-op a {
+    padding-left: 20px;
+    padding-right: 20px; }
 
 footer {
   font-family: "helvetica-neuebold";
@@ -455,14 +479,16 @@ footer {
     display: block;
     float: none; } }
 
+@media only screen and (max-width: 1228px) {
+  navbar-right {
+    padding-left: 0px; }
+    navbar-right ul li a {
+      font-size: 20px; } }
+
 @media only screen and (max-width: 1105px) {
   .container-fluid.container-fluid-navigation-op {
     margin-left: 0%;
     margin-right: 0%; }
-  .navbar-right {
-    padding-left: 0px; }
-    .navbar-right ul li a {
-      font-size: 20px; }
   nav.navbar-op li.listitem-op a:first-child {
     padding-left: 0px; }
   nav.navbar-op li.listitem-op a:hover {
@@ -474,7 +500,7 @@ footer {
   .navbar-right {
     padding-left: 0px; }
     .navbar-right ul li a {
-      font-size: 15px; }
+      font-size: 18px; }
   .container-fluid.container-fluid-no-margin-left-op {
     margin-left: 0%; }
   .container-fluid .no-padding-left-mobile-op {
@@ -537,6 +563,9 @@ footer {
   h3.price-package.smaller {
     font-size: 23px;
     width: 250px; }
+  h3.price-package.headlight {
+    font-size: 23px;
+    width: 100%; }
   #referenties {
     font-size: 50px; }
   footer p {
@@ -546,6 +575,18 @@ footer {
   footer i {
     padding: 15px 5px 5px 5px; } }
 
+@media only screen and (max-width: 920px) {
+  .navbar-right {
+    padding-left: 0px; }
+    .navbar-right ul li a {
+      font-size: 16px; } }
+
+@media only screen and (max-width: 860px) {
+  .navbar-right {
+    padding-left: 0px; }
+    .navbar-right ul li a {
+      font-size: 12px; } }
+
 @media only screen and (max-width: 767px) {
   .navbar-collapse {
     -webkit-box-shadow: none;
@@ -553,10 +594,13 @@ footer {
   nav {
     text-align: center; }
     nav .navbar-collapse-op {
-      border: 0px; }
+      border: 0px;
+      background-color: #000000;
+      margin-top: 12px; }
     nav.navbar-op li.listitem-op {
       float: center;
-      font-size: 17px; }
+      padding-top: 10px;
+      padding-bottom: 10px; }
       nav.navbar-op li.listitem-op:hover {
         border-bottom: 0px solid; }
         nav.navbar-op li.listitem-op:hover a {
@@ -564,7 +608,10 @@ footer {
         nav.navbar-op li.listitem-op:hover::after {
           border-bottom: 0px; }
       nav.navbar-op li.listitem-op a.link-op {
-        background-color: rgba(0, 0, 0, 0.4); }
+        color: #ffffff;
+        font-size: 20px; }
+        nav.navbar-op li.listitem-op a.link-op:hover {
+          color: #a6c7b8; }
     nav button.navbar-toggle-op {
       background-color: #a6c7b8;
       float: none;
@@ -582,3 +629,20 @@ footer {
       background-color: #ffffff; }
   iframe {
     margin-bottom: 25px; } }
+
+@media only screen and (max-width: 400px) {
+  h3.price-package.headlight {
+    font-size: 23px;
+    width: 100%; } }
+
+.video-section {
+  max-width: 100%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 75px; }
+  .video-section .video-section-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
