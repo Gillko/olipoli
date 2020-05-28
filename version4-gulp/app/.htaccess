@@ -1,0 +1,16 @@
+# security
+Header always append X-Frame-Options SAMEORIGIN
+
+ErrorDocument 404 /404.html
+
+
+<IfModule mod_rewrite.c>
+RewriteEngine on
+
+
+RewriteCond %{THE_REQUEST} /([^.]+)\.html [NC]
+RewriteRule ^ /%1 [NC,L,R]
+
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^ %{REQUEST_URI}.html [NC,L]
+</IfModule>
