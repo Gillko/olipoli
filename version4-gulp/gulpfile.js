@@ -278,7 +278,7 @@ function combiningScriptFiles() {
 				'app/assets/js/libraries/jquery/**/*.js',
 				'app/assets/js/libraries/bootstrap/**/*.js',
 				'app/assets/js/libraries/modernizr/**/*.js',
-				'app/assets/js/libraries/lightwidget/*.js',
+				//'app/assets/js/libraries/lightwidget/*.js',
 				'app/assets/js/*.js'
 			]
 		)
