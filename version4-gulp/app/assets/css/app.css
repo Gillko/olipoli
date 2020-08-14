@@ -21,6 +21,12 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--- COLORS ---*/
 .no-padding-right-op {
   padding-right: 0px; }
@@ -646,3 +652,19 @@ footer {
     left: 0;
     width: 100%;
     height: 100%; }
+
+.new-website-coming-soon {
+  background-color: #000000; }
+  .new-website-coming-soon img,
+  .new-website-coming-soon p {
+    text-align: center;
+    margin: 0 auto; }
+  .new-website-coming-soon img {
+    display: block; }
+  .new-website-coming-soon p {
+    color: #ffffff;
+    font-family: "robotoregular";
+    font-size: 16px; }
+  .new-website-coming-soon svg {
+    margin: 0 auto;
+    display: block; }

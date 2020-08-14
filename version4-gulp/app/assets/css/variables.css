@@ -19,4 +19,10 @@
   font-weight: normal;
   font-style: normal; }
 
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/roboto/roboto-regular-webfont.woff2") format("woff2"), url("../fonts/roboto/roboto-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
 /*--- COLORS ---*/
