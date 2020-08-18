@@ -1,0 +1,37 @@
+//import reset scss
+@import '_libraries/reset/reset.scss'											;
+
+//import normalize scss
+@import '_libraries/normalize/normalize.scss'									;
+
+//import variables
+@import 'variables.scss'														;
+
+//import bootstrap
+@import url('../css/libraries/bootstrap/4.4.1/bootstrap.min.css') 				;
+
+
+@import url('test.css');
+@import url('testTwo.css');
+
+
+//COMMENTS FOR CSS LIKE THIS
+
+/*==========BOOTSTRAP OVERRIDE==========*/
+	//import reset scss
+	
+	//import reset scss
+/*==========BOOTSTRAP OVERRIDE==========*/
+
+.test{
+	color: $blue;;
+}
+.testTwo{
+	color: yellow;
+	&.test{
+		color: green;
+	}
+	&.testThree{
+		color: purple;
+	}
+}

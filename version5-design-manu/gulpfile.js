@@ -143,7 +143,7 @@ function pdfTmp(){
 
 //+Moving fonts to the _tmp folder
 function fontsTmp(){
-	return gulp.src(['app/assets/fonts/**/*.{woff,woff2,svg,eot,ttf,otf}'])
+	return gulp.src(['app/assets/fonts/*.{woff,woff2}'])
 		//for reducing images
 		//.pipe(image())
 		.pipe(gulp.dest('_tmp/assets/fonts/')
@@ -166,7 +166,7 @@ function htaccessTmp(){
 
 //+Moving fonts to the _build folder
 function fontsBuild(){
-	return gulp.src(['_tmp/assets/fonts/**/*.{woff,woff2,svg,eot,ttf,otf}'])
+	return gulp.src(['_tmp/assets/fonts/*.{woff,woff2}'])
 		.pipe(gulp.dest('_build/assets/fonts')
 	);
 }
@@ -277,8 +277,6 @@ function combiningScriptFiles() {
 	return gulp.src([
 				'app/assets/js/libraries/jquery/**/*.js',
 				'app/assets/js/libraries/bootstrap/**/*.js',
-				'app/assets/js/libraries/modernizr/**/*.js',
-				//'app/assets/js/libraries/lightwidget/*.js',
 				'app/assets/js/*.js'
 			]
 		)

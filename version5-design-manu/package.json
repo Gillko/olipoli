@@ -1,0 +1,43 @@
+{
+  "name": "template-gulp",
+  "version": "1.0.0",
+  "description": "This is a repository with a custom gulp system for projects (created by gilko)",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp"
+  },
+  "author": "Gilko",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2",
+    "gulp-watch": "^5.0.1"
+  },
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "del": "^4.1.1",
+    "fancy-log": "^1.3.3",
+    "gulp-4.0.build": "^4.0.0-build.a271520",
+    "gulp-changed": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-collate": "0.0.3",
+    "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.7.0",
+    "gulp-cssimport": "^7.0.0",
+    "gulp-deleted": "^1.0.0",
+    "gulp-htm-include": "0.0.1",
+    "gulp-html": "^0.5.0",
+    "gulp-html-partial": "^1.0.1",
+    "gulp-image": "^6.1.0",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-include": "^2.4.1",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-newer": "^1.4.0",
+    "gulp-path": "^4.0.0",
+    "gulp-rename": "^1.4.0",
+    "gulp-savefile": "^0.1.1",
+    "gulp-string-replace": "^1.1.2",
+    "gulp-uglify": "^3.0.2",
+    "path": "^0.12.7"
+  }
+}
