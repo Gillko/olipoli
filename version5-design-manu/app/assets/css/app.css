@@ -3,15 +3,12 @@
    License: none (public domain)
 */
 @import url("../css/libraries/bootstrap/4.4.1/bootstrap.min.css");
-@import url("test.css");
-@import url("testTwo.css");
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+  font: inherit; }
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
@@ -408,14 +405,74 @@ td,
 th {
   padding: 0; }
 
-/*==========BOOTSTRAP OVERRIDE==========*/
-/*==========BOOTSTRAP OVERRIDE==========*/
-.test {
-  color: #0a45a4; }
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/roboto/roboto-regular.woff2") format("woff2"), url("..fonts/roboto/roboto-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
 
-.testTwo {
-  color: yellow; }
-  .testTwo.test {
-    color: green; }
-  .testTwo.testThree {
-    color: purple; }
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/roboto/roboto-bold.woff2") format("woff2"), url("../fonts/roboto/roboto-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'abolitionw00-regular';
+  src: url("../fonts/abolition/abolition-w00-regular.woff2") format("woff2"), url("../fonts/abolition/abolition-w00-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+/*==========BOOTSTRAP OVERRIDE==========*/
+/*==========BOOTSTRAP OVERRIDE==========*/
+/*==========GLOBAL==========*/
+/*==========GLOBAL==========*/
+/*==================================================HEADER==================================================*/
+.header {
+  position: relative; }
+  .header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(-90deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
+    z-index: 1; }
+    @media screen and (max-width: 575px) {
+      .header:before {
+        filter: brightness(50%);
+        -webkit-filter: brightness(50%); } }
+  .header.header__brightness-60:before {
+    filter: brightness(60%);
+    -webkit-filter: brightness(60%); }
+  .header .header__image img {
+    width: 100%; }
+  .header .header__title {
+    font-size: 80px; }
+    .header .header__title h1 {
+      font-family: "abolitionw00-regular";
+      font-size: 1.0em;
+      color: #fff;
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+      z-index: 2; }
+      @media screen and (max-width: 1199px) {
+        .header .header__title h1 {
+          font-size: 0.8em; } }
+      @media screen and (max-width: 991px) {
+        .header .header__title h1 {
+          font-size: 0.6em; } }
+      @media screen and (max-width: 767px) {
+        .header .header__title h1 {
+          font-size: 0.5em; } }
+      @media screen and (max-width: 575px) {
+        .header .header__title h1 {
+          text-align: center;
+          left: 0;
+          right: 0; } }
+
+/*==================================================HEADER==================================================*/

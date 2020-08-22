@@ -99,7 +99,8 @@ function html(){
 function imageTmp(){
 	return gulp.src([
 				'app/assets/img/*.{png,jpg,jpeg,gif,svg,ico}', 
-				'app/assets/img/*.{png,jpg,jpeg,gif,svg,ico}'
+				'app/assets/img/*.{png,jpg,jpeg,gif,svg,ico}',
+				'app/assets/img/**/*.{png,jpg,jpeg,gif,svg,ico}'
 			]
 		)
 		//for reducing images
@@ -143,7 +144,7 @@ function pdfTmp(){
 
 //+Moving fonts to the _tmp folder
 function fontsTmp(){
-	return gulp.src(['app/assets/fonts/*.{woff,woff2}'])
+	return gulp.src(['app/assets/fonts/**/*.{woff,woff2}'])
 		//for reducing images
 		//.pipe(image())
 		.pipe(gulp.dest('_tmp/assets/fonts/')
@@ -166,7 +167,7 @@ function htaccessTmp(){
 
 //+Moving fonts to the _build folder
 function fontsBuild(){
-	return gulp.src(['_tmp/assets/fonts/*.{woff,woff2}'])
+	return gulp.src(['_tmp/assets/fonts/**/*.{woff,woff2}'])
 		.pipe(gulp.dest('_build/assets/fonts')
 	);
 }
@@ -176,7 +177,8 @@ function fontsBuild(){
 function imageBuild(){
 	return gulp.src([
 				'_tmp/assets/img/*.{png,jpg,jpeg,gif,svg,ico}',
-				'_tmp/assets/img/*.{png,jpg,jpeg,gif,svg,ico}'
+				'_tmp/assets/img/*.{png,jpg,jpeg,gif,svg,ico}',
+				'_tmp/assets/img/**/*.{png,jpg,jpeg,gif,svg,ico}'
 			]
 		)
 		.pipe(gulp.dest('_build/assets/img')

@@ -1,0 +1,17 @@
+@font-face {
+  font-family: 'robotoregular';
+  src: url("../fonts/roboto/roboto-regular.woff2") format("woff2"), url("..fonts/roboto/roboto-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'robotobold';
+  src: url("../fonts/roboto/roboto-bold.woff2") format("woff2"), url("../fonts/roboto/roboto-bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'abolitionw00-regular';
+  src: url("../fonts/abolition/abolition-w00-regular.woff2") format("woff2"), url("../fonts/abolition/abolition-w00-regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }

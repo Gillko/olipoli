@@ -11,8 +11,8 @@
 @import url('../css/libraries/bootstrap/4.4.1/bootstrap.min.css') 				;
 
 
-@import url('test.css');
-@import url('testTwo.css');
+// @import url('test.css');
+// @import url('testTwo.css');
 
 
 //COMMENTS FOR CSS LIKE THIS
@@ -23,15 +23,83 @@
 	//import reset scss
 /*==========BOOTSTRAP OVERRIDE==========*/
 
-.test{
-	color: $blue;;
+
+
+
+
+/*==========GLOBAL==========*/
+h1{
+	
 }
-.testTwo{
-	color: yellow;
-	&.test{
-		color: green;
+/*==========GLOBAL==========*/
+
+
+
+
+
+/*==================================================HEADER==================================================*/
+	//header => 264px high
+	//double resolution => 530px high
+	//1920 * 2 = 3840
+	//images PSD exported to JPEG on 75%
+	.header{
+		position: 				relative 																	;
+		&:before{
+			content: 			''																			;
+			position: 			absolute;
+			top:				0																			;
+			left: 				0																			;
+			right: 				0																			;
+			bottom: 			0																			;
+			background: 		linear-gradient(-90deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0.4) 100%)		;
+			z-index: 			1																			;
+			@media screen and (max-width: 575px){
+				filter: 		brightness(50%)																;
+				-webkit-filter: brightness(50%)																;
+			}
+		}
+		&.header__brightness-60{
+			&:before{
+				filter: 		brightness(60%)																;
+				-webkit-filter: brightness(60%)																;
+			}
+		}
+		.header__image{
+			img{
+				width: 			100%																		;
+			}
+		}
+		.header__title{
+			font-size: 			80px 																		;
+			h1{
+				font-family: 	$abolition-R 																;
+				font-size: 		1.0em 																		;
+				color: 			$white 																		;
+				margin: 		0 																			;
+				position: 		absolute 																	;
+				top: 			50% 																		;
+				-ms-transform: 	translateY(-50%)															;
+				transform: 		translateY(-50%)															;
+				z-index: 		2 																			;
+				@media screen and (max-width: 1199px){
+					font-size:	0.8em 																		;
+				}
+				@media screen and (max-width: 991px){
+					font-size:	0.6em 																		;
+				}
+				@media screen and (max-width: 767px){
+					font-size:	0.5em 																		;
+				}
+				@media screen and (max-width: 575px){
+					text-align: center 																		;
+					left: 		0 																			;
+					right: 		0 																			;
+				}
+			}
+		}
 	}
-	&.testThree{
-		color: purple;
-	}
-}
+/*==================================================HEADER==================================================*/
+
+
+
+
