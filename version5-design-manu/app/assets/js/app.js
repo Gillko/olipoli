@@ -1,5 +1,10 @@
-//=require libraries/test.js
+$(document).ready(function(){
+	//jquery
+    //var current__page = $('body').attr('class');
 
-console.log( "ready!" );
+    //javascript
+	var current__page = document.getElementsByTagName('body')[0].className;
 
-console.log( "ready 2!" );
+	var active__link = document.querySelector('a.' + current__page);
+	active__link.className = active__link.className + ' header__navigation-active';
+});

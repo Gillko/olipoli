@@ -1,14 +1,14 @@
 //import reset scss
-@import '_libraries/reset/reset.scss'											;
+@import '_libraries/reset/reset.scss'																									;
 
 //import normalize scss
-@import '_libraries/normalize/normalize.scss'									;
+@import '_libraries/normalize/normalize.scss'																							;
 
 //import variables
-@import 'variables.scss'														;
+@import 'variables.scss'																												;
 
 //import bootstrap
-@import url('../css/libraries/bootstrap/4.4.1/bootstrap.min.css') 				;
+@import url('../css/libraries/bootstrap/4.4.1/bootstrap.min.css') 																		;
 
 
 // @import url('test.css');
@@ -27,78 +27,171 @@
 
 
 
-/*==========GLOBAL==========*/
-h1{
-	
+/*================================================================GLOBAL================================================================*/
+html,
+body{
+	background-color: 										$body 																		;
 }
-/*==========GLOBAL==========*/
+/*================================================================GLOBAL================================================================*/
 
 
 
 
-
-/*==================================================HEADER==================================================*/
-	//header => 264px high
-	//double resolution => 530px high
-	//1920 * 2 = 3840
-	//images PSD exported to JPEG on 75%
-	.header{
-		position: 				relative 																	;
-		&:before{
-			content: 			''																			;
-			position: 			absolute;
-			top:				0																			;
-			left: 				0																			;
-			right: 				0																			;
-			bottom: 			0																			;
-			background: 		linear-gradient(-90deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0.4) 100%)		;
-			z-index: 			1																			;
-			@media screen and (max-width: 575px){
-				filter: 		brightness(50%)																;
-				-webkit-filter: brightness(50%)																;
-			}
-		}
-		&.header__brightness-60{
-			&:before{
-				filter: 		brightness(60%)																;
-				-webkit-filter: brightness(60%)																;
-			}
-		}
-		.header__image{
-			img{
-				width: 			100%																		;
-			}
-		}
-		.header__title{
-			font-size: 			80px 																		;
-			h1{
-				font-family: 	$abolition-R 																;
-				font-size: 		1.0em 																		;
-				color: 			$white 																		;
-				margin: 		0 																			;
-				position: 		absolute 																	;
-				top: 			50% 																		;
-				-ms-transform: 	translateY(-50%)															;
-				transform: 		translateY(-50%)															;
-				z-index: 		2 																			;
-				@media screen and (max-width: 1199px){
-					font-size:	0.8em 																		;
-				}
-				@media screen and (max-width: 991px){
-					font-size:	0.6em 																		;
-				}
-				@media screen and (max-width: 767px){
-					font-size:	0.5em 																		;
-				}
-				@media screen and (max-width: 575px){
-					text-align: center 																		;
-					left: 		0 																			;
-					right: 		0 																			;
+/*===============================================================HEADER=================================================================*/
+header{
+	&.header{
+		position: 											relative 																	;
+		z-index: 											2 																			;
+		display: 											flex 																		;
+		display: 											-webkit-flex 																;
+		nav{
+			&.header__navigation{
+				font-size: 									40px 																		;
+				padding-top: 								2% 																			;
+				ul{
+					li{
+						list-style-type: 					none 																		;
+						float: 								left 																		;
+						padding-left: 						25px 																		;
+						padding-right: 						25px 																		;
+						&:first-child{
+							padding-left: 					40px 																		;
+						}
+						a{
+							font-family: 					$abolition-R																;
+							font-size: 						1em 																		;
+							color: 							$black 																		;
+							&:hover{
+								text-decoration: 			none 																		;
+								border-bottom: 				10px solid $red 															;
+								padding-bottom: 			6px 																		;
+								transition: 				all ease-in-out .2s 														;
+							}
+							&.header__navigation-active{
+								border-bottom: 				10px solid $red 															;
+								padding-bottom: 			6px 																		;
+							}
+						}
+					}
 				}
 			}
 		}
 	}
-/*==================================================HEADER==================================================*/
+}
+/*===============================================================HEADER=================================================================*/
+
+
+
+
+
+/*===============================================================HEADER HERO===========================================================*/
+	//header => 264px high
+	//double resolution => 530px high
+	//1920 * 2 = 3840
+	//images PSD exported to JPEG on 75%
+	.header__hero{
+		position: 											relative 																	;
+		top: 												-50px 																		;
+		&:before{
+			content: 										''																			;
+			position: 										absolute;
+			top:											0																			;
+			left: 											0																			;
+			right: 											0																			;
+			bottom: 										0																			;
+			background: 									linear-gradient(-90deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0.4) 100%)		;
+			z-index: 										1																			;
+			@media screen and (max-width: 575px){
+				filter: 									brightness(50%)																;
+				-webkit-filter: 							brightness(50%)																;
+			}
+		}
+		&.header__hero-brightness-60{
+			&:before{
+				filter: 									brightness(60%)																;
+				-webkit-filter: 							brightness(60%)																;
+			}
+		}
+		.header__hero-image{
+			img{
+				width: 										100%																		;
+				/* Safari, Chrome and Opera > 12.1 */
+				-webkit-animation: 							fadein 2s 																	;
+				-moz-animation: 							fadein 2s 																	;
+				/* Internet Explorer */
+				-ms-animation: 								fadein 2s 																	;
+				/* Opera < 12.1 */
+				-o-animation: 								fadein 2s 																	;
+				animation: 									fadein 2s																	;
+			}
+		}
+		//Fadein
+		@keyframes fadein {
+			from{
+				opacity: 									0																			;
+			}
+			to{
+				opacity: 									1																			;
+			}
+		}
+		/* Firefox */
+		@-moz-keyframes fadein {
+			from{
+				opacity: 									0																			;
+			}
+			to{
+				opacity: 									1																			;
+			}
+		}
+		/* Safari and Chrome */
+		@-webkit-keyframes fadein{
+			from{
+				opacity: 									0																			;
+			}
+			to{
+				opacity: 									1																			;
+			}
+		}
+		/* Opera */
+		@-o-keyframes fadein {
+			from{
+				opacity: 									0																			;
+			}
+			to{
+				opacity: 									1																			;
+			}
+		}
+		//Fadein
+		.header__hero-title{
+			font-size: 										80px 																		;
+			h1{
+				font-family: 								$abolition-R 																;
+				font-size: 									1.0em 																		;
+				color: 										$white 																		;
+				margin: 									0 																			;
+				position: 									absolute 																	;
+				top: 										50% 																		;
+				-ms-transform: 								translateY(-50%)															;
+				transform: 									translateY(-50%)															;
+				z-index: 									2 																			;
+				@media screen and (max-width: 1199px){
+					font-size:								0.8em 																		;
+				}
+				@media screen and (max-width: 991px){
+					font-size:								0.6em 																		;
+				}
+				@media screen and (max-width: 767px){
+					font-size:								0.5em 																		;
+				}
+				@media screen and (max-width: 575px){
+					text-align: 							center 																		;
+					left: 									0 																			;
+					right: 									0 																			;
+				}
+			}
+		}
+	}
+/*===============================================================HEADER HERO===========================================================*/
 
 
 

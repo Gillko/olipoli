@@ -425,12 +425,50 @@ th {
 
 /*==========BOOTSTRAP OVERRIDE==========*/
 /*==========BOOTSTRAP OVERRIDE==========*/
-/*==========GLOBAL==========*/
-/*==========GLOBAL==========*/
-/*==================================================HEADER==================================================*/
-.header {
-  position: relative; }
-  .header:before {
+/*================================================================GLOBAL================================================================*/
+html,
+body {
+  background-color: #f3f2f2; }
+
+/*================================================================GLOBAL================================================================*/
+/*===============================================================HEADER=================================================================*/
+header.header {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  display: -webkit-flex; }
+  header.header nav.header__navigation {
+    font-size: 40px;
+    padding-top: 2%; }
+    header.header nav.header__navigation ul li {
+      list-style-type: none;
+      float: left;
+      padding-left: 25px;
+      padding-right: 25px; }
+      header.header nav.header__navigation ul li:first-child {
+        padding-left: 40px; }
+      header.header nav.header__navigation ul li a {
+        font-family: "abolitionw00-regular";
+        font-size: 1em;
+        color: #000; }
+        header.header nav.header__navigation ul li a:hover {
+          text-decoration: none;
+          border-bottom: 10px solid #c9413c;
+          padding-bottom: 6px;
+          transition: all ease-in-out .2s; }
+        header.header nav.header__navigation ul li a.header__navigation-active {
+          border-bottom: 10px solid #c9413c;
+          padding-bottom: 6px; }
+
+/*===============================================================HEADER=================================================================*/
+/*===============================================================HEADER HERO===========================================================*/
+.header__hero {
+  position: relative;
+  top: -50px;
+  /* Firefox */
+  /* Safari and Chrome */
+  /* Opera */ }
+  .header__hero:before {
     content: '';
     position: absolute;
     top: 0;
@@ -440,17 +478,49 @@ th {
     background: linear-gradient(-90deg, rgba(0, 0, 0, 0.4) 0%, rgba(255, 255, 255, 0.4) 100%);
     z-index: 1; }
     @media screen and (max-width: 575px) {
-      .header:before {
+      .header__hero:before {
         filter: brightness(50%);
         -webkit-filter: brightness(50%); } }
-  .header.header__brightness-60:before {
+  .header__hero.header__hero-brightness-60:before {
     filter: brightness(60%);
     -webkit-filter: brightness(60%); }
-  .header .header__image img {
-    width: 100%; }
-  .header .header__title {
+  .header__hero .header__hero-image img {
+    width: 100%;
+    /* Safari, Chrome and Opera > 12.1 */
+    -webkit-animation: fadein 2s;
+    -moz-animation: fadein 2s;
+    /* Internet Explorer */
+    -ms-animation: fadein 2s;
+    /* Opera < 12.1 */
+    -o-animation: fadein 2s;
+    animation: fadein 2s; }
+
+@keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-moz-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-webkit-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+
+@-o-keyframes fadein {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+  .header__hero .header__hero-title {
     font-size: 80px; }
-    .header .header__title h1 {
+    .header__hero .header__hero-title h1 {
       font-family: "abolitionw00-regular";
       font-size: 1.0em;
       color: #fff;
@@ -461,18 +531,18 @@ th {
       transform: translateY(-50%);
       z-index: 2; }
       @media screen and (max-width: 1199px) {
-        .header .header__title h1 {
+        .header__hero .header__hero-title h1 {
           font-size: 0.8em; } }
       @media screen and (max-width: 991px) {
-        .header .header__title h1 {
+        .header__hero .header__hero-title h1 {
           font-size: 0.6em; } }
       @media screen and (max-width: 767px) {
-        .header .header__title h1 {
+        .header__hero .header__hero-title h1 {
           font-size: 0.5em; } }
       @media screen and (max-width: 575px) {
-        .header .header__title h1 {
+        .header__hero .header__hero-title h1 {
           text-align: center;
           left: 0;
           right: 0; } }
 
-/*==================================================HEADER==================================================*/
+/*===============================================================HEADER HERO===========================================================*/
