@@ -480,7 +480,8 @@ header.header {
         background-color: #000;
         width: 100%;
         display: none;
-        position: absolute; } }
+        position: absolute;
+        top: 0; } }
     @media screen and (max-width: 532px) {
       header.header nav.header__navigation.open {
         display: block; } }

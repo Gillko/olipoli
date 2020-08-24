@@ -84,11 +84,12 @@ header{
 					margin: 								0 auto 																		;
 				}
 				@media screen and (max-width: 532px){
-					padding-top: 							15% 																			;
+					padding-top: 							15% 																		;
 					background-color: 						$black 																		;
 					width: 									100% 																		;
 					display: 								none 																		;
 					position: 								absolute 																	;
+					top: 									0 																			;
 				}
 				&.open{
 					@media screen and (max-width: 532px){
