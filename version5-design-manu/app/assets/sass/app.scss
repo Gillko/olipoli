@@ -33,6 +33,12 @@ html,
 body{
 	background-color: 										$body 																		;
 }
+h1,
+h2,
+h3{
+	font-family: 											$abolition-R 																;
+	line-height: 											1.5em 																		;
+}
 /*================================================================GLOBAL================================================================*/
 
 
@@ -78,7 +84,7 @@ header{
 					margin: 								0 auto 																		;
 				}
 				@media screen and (max-width: 532px){
-					padding-top: 							0% 																			;
+					padding-top: 							15% 																			;
 					background-color: 						$black 																		;
 					width: 									100% 																		;
 					display: 								none 																		;
@@ -178,81 +184,85 @@ header{
 		//hamburger
 		//https://codepen.io/designcouch/pen/Atyop
 		.header__navigation-hamburger{
-			display: 								none 																		;
-			width: 									60px																		;
-			height: 								45px																		;
-			position: 								absolute 																	;
-			right: 									0% 																			;
-			top: 									60px																		;
-			-webkit-transform: 						rotate(0deg)																;
-			-moz-transform: 						rotate(0deg)																;
-			-o-transform: 							rotate(0deg)																;
-			transform: 								rotate(0deg)																;
-			-webkit-transition: 					.5s ease-in-out																;
-			-moz-transition: 						.5s ease-in-out																;
-			-o-transition: 							.5s ease-in-out																;
-			transition: 							.5s ease-in-out																;
-			cursor: 								pointer 																	;
+			display: 										none 																		;
+			width: 											60px																		;
+			height: 										45px																		;
+			position: 										absolute 																	;
+			right: 											0% 																			;
+			top: 											60px																		;
+			-webkit-transform: 								rotate(0deg)																;
+			-moz-transform: 								rotate(0deg)																;
+			-o-transform: 									rotate(0deg)																;
+			transform: 										rotate(0deg)																;
+			-webkit-transition: 							.5s ease-in-out																;
+			-moz-transition: 								.5s ease-in-out																;
+			-o-transition: 									.5s ease-in-out																;
+			transition: 									.5s ease-in-out																;
+			cursor: 										pointer 																	;
 			@media screen and (max-width: 532px){
-				display: 							block 																		;
+				display: 									block 																		;
 				//see container__header on 532px of browser size ; add 15px margin right
-				margin-right: 						15px 																		;
+				margin-right: 								15px 																		;
+			}
+			@media screen and (max-width: 269px){
+				width: 										40px																		;
+				top: 										86px 																		;
 			}
 			&.open{
 				@media screen and (max-width: 532px){
-					top: 							20px 																		;
+					top: 									20px 																		;
 				}
 				span{
-					background: 					$white 																		;
+					background: 							$white 																		;
 					&:nth-child(1){
-						top: 						18px																		;
-						width: 						0%																			;
-						left: 						50%																			;
+						top: 								18px																		;
+						width: 								0%																			;
+						left: 								50%																			;
 					}
 					&:nth-child(2){
-						-webkit-transform: 			rotate(45deg)																;
-						-moz-transform: 			rotate(45deg)																;
-						-o-transform: 				rotate(45deg)																;
-						transform: 					rotate(45deg)																;
+						-webkit-transform: 					rotate(45deg)																;
+						-moz-transform: 					rotate(45deg)																;
+						-o-transform: 						rotate(45deg)																;
+						transform: 							rotate(45deg)																;
 					}
 					&:nth-child(3){
-						-webkit-transform: 			rotate(-45deg)																;
-						-moz-transform: 			rotate(-45deg)																;
-						-o-transform: 				rotate(-45deg)																;
-						transform: 					rotate(-45deg)																;
+						-webkit-transform: 					rotate(-45deg)																;
+						-moz-transform: 					rotate(-45deg)																;
+						-o-transform: 						rotate(-45deg)																;
+						transform: 							rotate(-45deg)																;
 
 					}
 					&:nth-child(4){
-						top: 						18px																		;
-						width:						0%																			;
-						left: 						50%																			;
+						top: 								18px																		;
+						width:								0%																			;
+						left: 								50%																			;
 					}
 				}
 			}
 			span{
-				display: 							block 																		;
-				position: 							absolute 																	;
-				height: 							6px 																		;
-				width: 								100% 																		;
-				background: 						$black 																		;
-				left: 								0 																			;
-				-webkit-transform: 					rotate(0deg) 																;
-				-moz-transform: 					rotate(0deg) 																;
-				-o-transform: 						rotate(0deg) 																;
-				transform: 							rotate(0deg)																;
-				-webkit-transition: 				.25s ease-in-out															;
-				-moz-transition: 					.25s ease-in-out															;
-				-o-transition: 						.25s ease-in-out															;
-				transition: 						.25s ease-in-out															;
+				display: 									block 																		;
+				position: 									absolute 																	;
+				height: 									6px 																		;
+				width: 										100% 																		;
+				background: 								$black 																		;
+				left: 										0 																			;
+				-webkit-transform: 							rotate(0deg) 																;
+				-moz-transform: 							rotate(0deg) 																;
+				-o-transform: 								rotate(0deg) 																;
+				transform: 									rotate(0deg)																;
+				-webkit-transition: 						.25s ease-in-out															;
+				-moz-transition: 							.25s ease-in-out															;
+				-o-transition: 								.25s ease-in-out															;
+				transition: 								.25s ease-in-out															;
 				&:nth-child(1){
-					top: 							0px																			;
+					top: 									0px																			;
 				}
 				&:nth-child(2),
 				&:nth-child(3){
-					top: 							18px																		;
+					top: 									18px																		;
 				}
 				&:nth-child(4){
-					top: 							36px																		;
+					top: 									36px																		;
 				}
 			}
 			//hamburger
@@ -282,6 +292,9 @@ header{
 		}
 		@media screen and (max-width: 532px){
 			top: 											-20px 																		;
+		}
+		@media screen and (max-width: 269px){
+			top: 											10px 																		;
 		}
 		&:before{
 			content: 										''																			;
@@ -356,7 +369,6 @@ header{
 		.header__hero-title{
 			font-size: 										80px 																		;
 			h1{
-				font-family: 								$abolition-R 																;
 				font-size: 									1.0em 																		;
 				color: 										$white 																		;
 				margin: 									0 																			;
@@ -385,6 +397,16 @@ header{
 					left: 									0 																			;
 					right: 									0 																			;
 				}
+				@media screen and (max-width: 459px){
+					text-align: 							right 																		;
+					padding-right: 							15px 																		;
+				}
+				@media screen and (max-width: 359px){
+					font-size:								0.4em 																		;
+				}
+				@media screen and (max-width: 269px){
+					font-size:								0.3em 																		;
+				}
 			}
 		}
 	}
@@ -393,3 +415,121 @@ header{
 
 
 
+/*==================================================================FOOTER==============================================================*/
+footer{
+	&.footer{
+		background-color: 									$black 																		;
+		.footer__quote{
+			background-color: 								$green 																		;
+			//padding top and bottom needed to be 30px, but becuase 14px padding is sticked into font : 30 - 14 = 16px
+			padding-top: 									16px 																		;
+			padding-bottom: 								16px 																		;
+			font-size: 										40px 																		;
+			border-top: 									2px solid $white 															;
+			h2{
+				font-size: 									1.0em 																		;
+			}
+		}
+		.footer__collaboration{
+			font-size: 										40px 																		;
+			//padding-top of 30px - 14px padding that is sticked into font
+			padding-top: 									16px 																		;
+			@media screen and (max-width: 1199px){
+				padding-bottom: 							16px 																		;
+			}
+			h3{
+				font-size: 									1.0em 																		;
+				color: 										$white 																		;
+				@media screen and (max-width: 991px){
+					font-size: 								0.8em 																		;
+				}
+				@media screen and (max-width: 233px){
+					font-size: 								0.6em 																		;
+				}
+			}
+			ul{
+				font-family: 								$roboto-R 																	;
+				color: 										$white 																		;
+				font-size: 									0.3em 																		;
+				line-height: 								1.5em 																		;
+				li{
+					display: 								inline-block 																;
+					padding-left: 							15px 																		;
+					padding-right: 							15px 																		;
+					@media screen and (max-width: 991px){
+						display: 							block 																		;
+						padding-left: 						0px 																		;
+						padding-right: 						0px 																		;
+					}
+					&:first-child{
+						padding-left: 						0px 																		;
+					}
+					&:last-child{
+						padding-right: 						0px 																		;
+					}
+				}
+			}
+			.footer__collaboration-brands{
+				@media screen and (max-width: 991px){
+					padding-top: 							16px 																		;
+				}
+				.footer__collaboration-brands__logos{
+					img{
+						&.footer__collaborationbrands__logos-logo{
+							padding-left: 					10px 																		;
+							padding-right: 					10px 																		;
+							&:first-child{
+								padding-left: 				0px 																		;
+							}
+							&:last-child{
+								padding-right: 				0px 																		;
+							}
+							@media screen and (max-width: 1199px){
+								padding-left: 				0px 																		;
+								padding-right: 				0px 																		;
+							}
+							@media screen and (max-width: 991px){
+								height: 					38px 																		;
+							}
+							@media screen and (max-width: 233px){
+								height: 					30px 																		;
+							}
+						}
+					}
+				}
+			}
+		}
+		.footer__copyright{
+			font-size: 										40px 																		;
+			padding-bottom: 								30px 																		;
+			display: 										flex 																		;
+			@media screen and (max-width: 399px){
+				display: 									block 																		;
+			}
+			h3{
+				font-size: 									1.0em 																		;
+				color: 										$white 																		;
+				@media screen and (max-width: 991px){
+					font-size: 								0.8em 																		;
+				}
+				@media screen and (max-width: 233px){
+					font-size: 								0.6em 																		;
+				}
+			}
+			.footer__copyright-social{
+				padding-left: 								20px 																		;
+				padding-top: 								5px 																		;
+				@media screen and (max-width: 399px){
+					padding-left: 							0px 																		;
+					padding-top: 							0px 																		;
+				}
+				a{
+					&.footer__copyright-social__link{
+						text-decoration: 					none 																		;
+					}
+				}
+			}
+		}
+	}
+}
+/*==================================================================FOOTER==============================================================*/
