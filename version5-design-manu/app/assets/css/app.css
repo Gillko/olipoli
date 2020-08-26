@@ -659,6 +659,28 @@ header.header {
   .header__hero.header__hero-brightness-60:before {
     filter: brightness(60%);
     -webkit-filter: brightness(60%); }
+  .header__hero.header__hero-brightness-40:before {
+    filter: brightness(40%);
+    -webkit-filter: brightness(40%); }
+  .header__hero.header__hero-video {
+    position: relative;
+    background-color: #000;
+    min-height: 25rem;
+    width: 100%;
+    overflow: hidden; }
+    .header__hero.header__hero-video video {
+      position: absolute;
+      top: 30%;
+      left: 50%;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: 0;
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%); }
   .header__hero .header__hero-image img {
     width: 100%;
     /* Safari, Chrome and Opera > 12.1 */
@@ -695,8 +717,11 @@ header.header {
     opacity: 1; } }
   .header__hero .header__hero-title {
     font-size: 80px; }
+    .header__hero .header__hero-title.header__hero-title__video h1 {
+      top: 50%; }
     .header__hero .header__hero-title h1 {
       font-size: 1.0em;
+      line-height: 1.0em;
       color: #fff;
       margin: 0;
       position: absolute;

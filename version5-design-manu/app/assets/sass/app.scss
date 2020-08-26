@@ -317,6 +317,33 @@ header{
 				-webkit-filter: 							brightness(60%)																;
 			}
 		}
+		&.header__hero-brightness-40{
+			&:before{
+				filter: 									brightness(40%)																;
+				-webkit-filter: 							brightness(40%)																;
+			}
+		}
+		&.header__hero-video {
+			position: 										relative 																	;
+			background-color: 								$black 																		;
+			min-height: 									25rem 																		;
+			width: 											100% 																		;
+			overflow: 										hidden 																		;
+			video{
+				position: 									absolute 																	;
+				top: 										30% 																		;
+				left: 										50% 																		;
+				min-width: 									100% 																		;
+				min-height: 								100% 																		;
+				width: 										auto 																		;
+				height: 									auto 																		;
+				z-index: 									0 																			;
+				-ms-transform: 								translateX(-50%) translateY(-50%) 											;
+				-moz-transform: 							translateX(-50%) translateY(-50%) 											;
+				-webkit-transform: 							translateX(-50%) translateY(-50%) 											;
+				transform: 									translateX(-50%) translateY(-50%) 											;
+			}
+		}
 		.header__hero-image{
 			img{
 				width: 										100%																		;
@@ -369,8 +396,14 @@ header{
 		//Fadein
 		.header__hero-title{
 			font-size: 										80px 																		;
+			&.header__hero-title__video{
+				h1{
+					top: 									50% 																		;
+				}
+			}
 			h1{
 				font-size: 									1.0em 																		;
+				line-height: 								1.0em 																		;
 				color: 										$white 																		;
 				margin: 									0 																			;
 				position: 									absolute 																	;
@@ -540,6 +573,8 @@ footer{
 
 
 /*==================================================================SLIDER===============================================================*/
+//https://ourcodeworld.com/articles/read/263/top-5-best-before-and-after-image-comparison-slider-jquery-and-javascript-plugins
+//https://pepsized.com/demo/beer-slider-responsive-accessible-before-after-slider-demo/
 .beer-slider{
 	margin-bottom: 											1.5rem 																		;
 	margin-left: 											auto 																		;
