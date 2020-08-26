@@ -25,9 +25,28 @@
 			</div>
 		</div>
 
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<div id="slider" class="beer-slider" data-beer-label="after">
+						<img src="assets/img/cars/aston-martin-after.png" alt="after">
+						<div class="beer-reveal" data-beer-label="before">
+							<img src="assets/img/cars/aston-martin-before.png" alt="before">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6">
+				</div>
+			</div>
+		</div>
+
 		<!--include footer-->
 		<partial src="footer/footer.html"></partial>
 		<!--include footer-->
+
+		<script>
+			new BeerSlider(document.getElementById('slider'));
+		</script>
 
 	</body>
 </html>

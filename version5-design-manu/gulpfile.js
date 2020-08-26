@@ -278,6 +278,7 @@ function changePaths(){
 function combiningScriptFiles() {
 	return gulp.src([
 				'app/assets/js/libraries/jquery/**/*.js',
+				'app/assets/js/libraries/beerslider/*.js',
 				'app/assets/js/libraries/bootstrap/**/*.js',
 				'app/assets/js/*.js'
 			]
