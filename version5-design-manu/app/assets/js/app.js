@@ -1,8 +1,8 @@
 $(document).ready(function(){
 	//jquery
-    //var current__page = $('body').attr('class');
+	//var current__page = $('body').attr('class');
 
-    //javascript
+	//javascript
 	var current__page = document.getElementsByTagName('body')[0].className;
 
 	var active__link = document.querySelector('a.' + current__page);
@@ -17,5 +17,13 @@ $(document).ready(function(){
 		$(this).toggleClass('open');
 
 		$('.header__navigation').toggleClass('open');
+	});
+
+	//showing more before after references
+	$('#button').click(function(){
+		$('.before-after__car.before-after__car__hidden:hidden').slice(0,1).fadeIn();
+		if ($('#before-after .before-after__car').length == $('#before-after .before-after__car:visible').length) {
+			$('#button').hide();
+		}
 	});
 });

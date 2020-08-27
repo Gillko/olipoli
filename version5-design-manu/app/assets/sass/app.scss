@@ -43,34 +43,44 @@ p{
 	font-family: 											$roboto-R 																	;
 	font-size: 												14px 																		;
 }
-.button{
-	display: 												flex 																		;
-	.button__link-black{
-		color: 												$black 																		;
-		border: 											1px solid $black 															;
-		border-radius: 										6px 																		;
-	}
-	.button__link-white{
-		color: 												$white 																		;
-		border: 											1px solid $white 															;
-	}
-	&.button__p-t-20{
-		padding-top: 										20px 																		;
-	}
-	&.button__p-b-20{
-		padding-bottom: 									20px 																		;
-	}
-	a{
-		text-decoration: 									none 																		;
-		padding: 											10px 130px 10px 130px 														;
-		display: 											block 																		;
-		@media screen and (max-width: 767px){
-			padding: 										10px 		 																;
-			width: 											100% 																		;
-			text-align: 									center 																		;
+button{
+	&.button{
+		background: 										none 																		;
+		color: 												inherit 																	;
+		border: 											none 																		;
+		padding: 											0 																			;
+		font: 												inherit 																	;
+		cursor: 											pointer 																	;
+		outline: 											inherit 																	;
+		.button__link-black{
+			color: 											$black 																		;
+			border: 										1px solid $black 															;
+			border-radius: 									6px 																		;
+		}
+		.button__link-white{
+			color: 											$white 																		;
+			border: 										1px solid $white 															;
+		}
+		&.button__p-t-20{
+			padding-top: 									20px 																		;
+		}
+		&.button__p-b-20{
+			padding-bottom: 								20px 																		;
+		}
+		a,
+		p{
+			text-decoration: 								none 																		;
+			padding: 										10px 130px 10px 130px 														;
+			display: 										block 																		;
+			@media screen and (max-width: 767px){
+				padding: 									10px 		 																;
+				width: 										100% 																		;
+				text-align: 								center 																		;
+			}
 		}
 	}
 }
+
 /*================================================================GLOBAL================================================================*/
 
 
@@ -785,6 +795,9 @@ footer{
 	.before-after__car{
 		padding-top: 										20px 																		;
 		padding-bottom: 									20px 																		;
+		&.before-after__car__hidden{
+			display: 										none 																		;
+		}
 		@media screen and (max-width: 767px){
 			padding-top: 									60px 																		;
 		}

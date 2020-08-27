@@ -445,25 +445,33 @@ p {
   font-family: "robotoregular";
   font-size: 14px; }
 
-.button {
-  display: flex; }
-  .button .button__link-black {
+button.button {
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit; }
+  button.button .button__link-black {
     color: #000;
     border: 1px solid #000;
     border-radius: 6px; }
-  .button .button__link-white {
+  button.button .button__link-white {
     color: #fff;
     border: 1px solid #fff; }
-  .button.button__p-t-20 {
+  button.button.button__p-t-20 {
     padding-top: 20px; }
-  .button.button__p-b-20 {
+  button.button.button__p-b-20 {
     padding-bottom: 20px; }
-  .button a {
+  button.button a,
+  button.button p {
     text-decoration: none;
     padding: 10px 130px 10px 130px;
     display: block; }
     @media screen and (max-width: 767px) {
-      .button a {
+      button.button a,
+      button.button p {
         padding: 10px;
         width: 100%;
         text-align: center; } }
@@ -1001,6 +1009,8 @@ footer.footer {
 .before-after .before-after__car {
   padding-top: 20px;
   padding-bottom: 20px; }
+  .before-after .before-after__car.before-after__car__hidden {
+    display: none; }
   @media screen and (max-width: 767px) {
     .before-after .before-after__car {
       padding-top: 60px; } }
