@@ -441,6 +441,33 @@ h3 {
   font-family: "abolitionw00-regular";
   line-height: 1.5em; }
 
+p {
+  font-family: "robotoregular";
+  font-size: 14px; }
+
+.button {
+  display: flex; }
+  .button .button__link-black {
+    color: #000;
+    border: 1px solid #000;
+    border-radius: 6px; }
+  .button .button__link-white {
+    color: #fff;
+    border: 1px solid #fff; }
+  .button.button__p-t-20 {
+    padding-top: 20px; }
+  .button.button__p-b-20 {
+    padding-bottom: 20px; }
+  .button a {
+    text-decoration: none;
+    padding: 10px 130px 10px 130px;
+    display: block; }
+    @media screen and (max-width: 767px) {
+      .button a {
+        padding: 10px;
+        width: 100%;
+        text-align: center; } }
+
 /*================================================================GLOBAL================================================================*/
 /*===============================================================HEADER=================================================================*/
 header.header {
@@ -855,7 +882,6 @@ footer.footer {
 /*==================================================================FOOTER==============================================================*/
 /*==================================================================SLIDER===============================================================*/
 .beer-slider {
-  margin-bottom: 1.5rem;
   margin-left: auto;
   margin-right: auto;
   display: inline-block;
@@ -972,3 +998,28 @@ footer.footer {
   opacity: 1; }
 
 /*==================================================================SLIDER===============================================================*/
+.before-after .before-after__car {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  @media screen and (max-width: 767px) {
+    .before-after .before-after__car {
+      padding-top: 60px; } }
+  @media screen and (max-width: 532px) {
+    .before-after .before-after__car {
+      padding-top: 0px; } }
+  .before-after .before-after__car .before-after__car-information {
+    padding-top: 60px;
+    padding-bottom: 100px; }
+    @media screen and (max-width: 767px) {
+      .before-after .before-after__car .before-after__car-information {
+        padding-top: 0px;
+        padding-bottom: 30px; } }
+    .before-after .before-after__car .before-after__car-information h2 {
+      font-size: 40px; }
+    .before-after .before-after__car .before-after__car-information a {
+      color: #c9413c;
+      padding-top: 24px;
+      display: block; }
+    .before-after .before-after__car .before-after__car-information .before-after__car-information__services p.before-after__car-information__services-bold {
+      padding-top: 14px;
+      font-family: "robotobold"; }

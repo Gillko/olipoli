@@ -39,6 +39,38 @@ h3{
 	font-family: 											$abolition-R 																;
 	line-height: 											1.5em 																		;
 }
+p{
+	font-family: 											$roboto-R 																	;
+	font-size: 												14px 																		;
+}
+.button{
+	display: 												flex 																		;
+	.button__link-black{
+		color: 												$black 																		;
+		border: 											1px solid $black 															;
+		border-radius: 										6px 																		;
+	}
+	.button__link-white{
+		color: 												$white 																		;
+		border: 											1px solid $white 															;
+	}
+	&.button__p-t-20{
+		padding-top: 										20px 																		;
+	}
+	&.button__p-b-20{
+		padding-bottom: 									20px 																		;
+	}
+	a{
+		text-decoration: 									none 																		;
+		padding: 											10px 130px 10px 130px 														;
+		display: 											block 																		;
+		@media screen and (max-width: 767px){
+			padding: 										10px 		 																;
+			width: 											100% 																		;
+			text-align: 									center 																		;
+		}
+	}
+}
 /*================================================================GLOBAL================================================================*/
 
 
@@ -323,6 +355,7 @@ header{
 				-webkit-filter: 							brightness(40%)																;
 			}
 		}
+		//https://jsfiddle.net/StartBootstrap/enajc82d/
 		&.header__hero-video {
 			position: 										relative 																	;
 			background-color: 								$black 																		;
@@ -576,7 +609,6 @@ footer{
 //https://ourcodeworld.com/articles/read/263/top-5-best-before-and-after-image-comparison-slider-jquery-and-javascript-plugins
 //https://pepsized.com/demo/beer-slider-responsive-accessible-before-after-slider-demo/
 .beer-slider{
-	margin-bottom: 											1.5rem 																		;
 	margin-left: 											auto 																		;
 	margin-right: 											auto 																		;
 	display: 												inline-block 																;
@@ -745,3 +777,43 @@ footer{
 	}
 }
 /*==================================================================SLIDER===============================================================*/
+
+
+
+
+.before-after{
+	.before-after__car{
+		padding-top: 										20px 																		;
+		padding-bottom: 									20px 																		;
+		@media screen and (max-width: 767px){
+			padding-top: 									60px 																		;
+		}
+		@media screen and (max-width: 532px){
+			padding-top: 									0px 																		;
+		}
+		.before-after__car-information{
+			padding-top: 									60px 																		;
+			padding-bottom: 								100px 																		;
+			@media screen and (max-width: 767px){
+				padding-top: 								0px 																		;
+				padding-bottom: 							30px 																		;
+			}
+			h2{
+				font-size: 									40px 																		;
+			}
+			a{
+				color: 										$red 																		;
+				padding-top: 								24px 																		;
+				display: 									block 																		;
+			}
+			.before-after__car-information__services{
+				p{
+					&.before-after__car-information__services-bold{
+						padding-top: 						14px 																		;
+						font-family: 						$roboto-B 																	;
+					}
+				}
+			}
+		}
+	}
+}
