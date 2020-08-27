@@ -20,10 +20,31 @@ $(document).ready(function(){
 	});
 
 	//showing more before after references
-	$('#button').click(function(){
-		$('.before-after__car.before-after__car__hidden:hidden').slice(0,1).fadeIn();
-		if ($('#before-after .before-after__car').length == $('#before-after .before-after__car:visible').length) {
-			$('#button').hide();
+	var $button					= '#button';
+	var $hiddenCarFirst 		= '#before-after .before-after__car__hidden:first';
+	var $hiddenCar 				= '#before-after .before-after__car__hidden';
+	var $removeClassHiddenCar 	= 'before-after__car__hidden';
+	var $scrollToCar			= '#before-after__car__scroll-to';
+
+	var $car 					= '#before-after .before-after__car';
+
+	$($button).click(function(){
+		$($hiddenCar + ':hidden').slice(0,2).fadeIn().scrollTop();
+
+		$($car).removeAttr('id');
+
+		$($hiddenCarFirst).attr('id', 'before-after__car__scroll-to');
+		
+		$($hiddenCarFirst).removeClass($removeClassHiddenCar);
+
+		$($hiddenCar + ':eq(0)').removeClass($removeClassHiddenCar);
+
+		$('html, body').animate({
+			scrollTop: $($scrollToCar).offset().top
+		}, 1000);
+
+		if($($car).length == $($car + ':visible').length){
+			$($button).hide();
 		}
 	});
 });
