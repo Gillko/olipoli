@@ -11,19 +11,21 @@
 @import url('../css/libraries/bootstrap/4.4.1/bootstrap.min.css') 																		;
 
 
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap') 															;
 
 
 /*==========================================================OVERRIDE BOOTSTRAP==========================================================*/
 //no padding left for the navigation on mobile so the background color is on the whole width
 //the logo and hamburger will be sticking to the browser edges so we need to add 15px margin to the left of logo and right of hamburger
 .container__header{
-	@media screen and (max-width: 532px){
+	@media screen and (max-width: 547px){
 		padding-right: 										0px 																		;
 		padding-left: 										0px 																		;
 	}
 }
 /*==========================================================OVERRIDE BOOTSTRAP==========================================================*/
+
+
 
 
 
@@ -37,11 +39,93 @@ h1,
 h2,
 h3{
 	font-family: 											$abolition-R 																;
-	line-height: 											1.5em 																		;
 }
-p{
+h2{
+	font-size: 												40px 																		;
+	&.p-b-14{
+		padding-bottom: 									14px 																		;
+	}
+	span{
+		font-size: 											26px 																		;
+	}
+}
+h3{
+	font-size: 												38px 																		;
+}
+p,
+ul{
 	font-family: 											$roboto-R 																	;
 	font-size: 												14px 																		;
+	line-height: 											21px 																		;
+	li{
+		&.f-f-r-b{
+			font-family:  									$roboto-B 																	;
+		}
+	}
+}
+p{
+	&.p-b-14{
+		padding-bottom: 									14px 																		;
+	}
+	&.p-b-28{
+		padding-bottom: 									28px 																		;
+	}
+	&.p-t-14{
+		padding-top: 										14px 																		;
+	}
+	&.f-f-r-b{
+		font-family:  										$roboto-B 																	;
+	}
+}
+a{
+	display: 												block 																		;
+	font-size: 												14px 																		;
+	&:hover{
+		color: 												$green 																		;
+	}
+	&.t-d-u{
+		text-decoration: 									underline 																	;
+	}
+	&.a-green{
+		color: 												$green 																		;
+	}
+	&.a-red{
+		color: 												$red 																		;
+	}
+	&.p-b-14{
+		padding-bottom: 									14px 																		;
+	}
+}
+br{
+	&.d-n{
+		@media screen and (max-width: 767px){
+			display: 										none 																		;
+		}
+	}
+}
+img{
+	&.p-t-12{
+		padding-top: 										12px 																		;
+	}
+	&.w-100{
+		width: 												100% 																		;
+	}
+}
+div{
+	&.p-t-0{
+		padding-top: 										0px 																		;
+	}
+}
+main{
+	&.main__content{
+		padding-bottom: 									50px 																		;
+		@media screen and (max-width: 767px){
+			padding-top: 									50px 																		;
+		}
+	}
+	&.p-b-0{
+		padding-bottom: 									0px 																		;
+	}
 }
 button{
 	&.button{
@@ -51,6 +135,7 @@ button{
 		font: 												inherit 																	;
 		cursor: 											pointer 																	;
 		outline: 											inherit 																	;
+		padding: 											0 																			;
 		.button__link-black{
 			color: 											$black 																		;
 			border: 										1px solid $black 															;
@@ -59,6 +144,7 @@ button{
 		.button__link-white{
 			color: 											$white 																		;
 			border: 										1px solid $white 															;
+			border-radius: 									6px 																		;
 		}
 		&.button__p-t-20{
 			padding-top: 									20px 																		;
@@ -81,8 +167,11 @@ button{
 		}
 	}
 }
-
+#map {
+	height:  												370px 																		;
+}
 /*================================================================GLOBAL================================================================*/
+
 
 
 
@@ -99,18 +188,17 @@ header{
 			flex-direction: 								column 																		;
 			text-align: 									center 																		;
 		}
-		@media screen and (max-width: 532px){
+		@media screen and (max-width: 547px){
 			text-align: 									inherit 																	;
 		}
 		.header__logo{
-			@media screen and (max-width: 532px){
-				//see container__header on 532px of browser size ; add 15px margin right
+			@media screen and (max-width: 547px){
+				//see container__header on 547px of browser size ; add 15px margin right
 				margin-left: 								15px 																		;
 			}
 		}
 		nav{
 			&.header__navigation{
-				font-size: 									40px 																		;
 				padding-top: 								2% 																			;
 				//combined with the font size of the 'a' of the header__navigation & padding of the navigation items
 				@media screen and (max-width: 1399px){
@@ -126,7 +214,7 @@ header{
 					padding-top: 							2% 																			;
 					margin: 								0 auto 																		;
 				}
-				@media screen and (max-width: 532px){
+				@media screen and (max-width: 547px){
 					padding-top: 							15% 																		;
 					background-color: 						$black 																		;
 					width: 									100% 																		;
@@ -135,11 +223,18 @@ header{
 					top: 									0 																			;
 				}
 				&.open{
-					@media screen and (max-width: 532px){
+					@media screen and (max-width: 547px){
 						display: 							block 																		;
 					}
 				}
+				&.close{
+					@media screen and (max-width: 547px){
+						display: 							none 																		;
+					}
+				}
 				ul{
+					font-size: 								40px 																		;
+					line-height: 							60px 																		;
 					li{
 						list-style-type: 					none 																		;
 						float: 								left 																		;
@@ -150,15 +245,16 @@ header{
 							padding-left: 					10px 																		;
 							padding-right: 					10px 																		;
 						}
-						@media screen and (max-width: 532px){
+						@media screen and (max-width: 547px){
 							float: 							none 																		;
 							padding-left: 					0px 																		;
 							padding-right: 					0px 																		;
 							text-align: 					center 																		;
 							padding-bottom: 				6px 																		;
 							padding-top: 					6px 																		;
+							line-height: 					40px 																		;
 							&:hover{
-								background-color: 			$red 																		;
+								background-color: 			$green 																		;
 							}
 						}
 						&:first-child{
@@ -170,7 +266,7 @@ header{
 							@media screen and (max-width: 767px){
 								padding-left: 				0px 																		;
 							}
-							@media screen and (max-width: 532px){
+							@media screen and (max-width: 547px){
 								padding-left: 				0px 																		;
 							}
 						}
@@ -180,8 +276,8 @@ header{
 							}
 						}
 						&.header__navigation-active-mobile{
-							@media screen and (max-width: 532px){
-								background-color: 			$red 																		;
+							@media screen and (max-width: 547px){
+								background-color: 			$green 																		;
 							}
 						}
 						a{
@@ -198,25 +294,22 @@ header{
 							@media screen and (max-width: 767px){
 								font-size: 					0.66em 																		;
 							}
-							@media screen and (max-width: 532px){
+							@media screen and (max-width: 547px){
 								color: 						$white 																		;
 								//to create it clickable on mobile for a width of 100%
 								display: 					block 																		;
 							}
 							&:hover{
 								text-decoration: 			none 																		;
-								border-bottom: 				10px solid $red 															;
-								padding-bottom: 			6px 																		;
+								border-bottom: 				8px solid $red 																;
 								transition: 				all ease-in-out .2s 														;
-								@media screen and (max-width: 532px){
+								@media screen and (max-width: 547px){
 									border-bottom: 			none 																		;
-									padding-bottom: 		0px 																		;
 								}
 							}
 							&.header__navigation-active{
-								border-bottom: 				10px solid $red 															;
-								padding-bottom: 			6px 																		;
-								@media screen and (max-width: 532px){
+								border-bottom: 				8px solid $red 																;
+								@media screen and (max-width: 547px){
 									border-bottom: 			none 																		;
 								}
 							}
@@ -243,9 +336,9 @@ header{
 			-o-transition: 									.5s ease-in-out																;
 			transition: 									.5s ease-in-out																;
 			cursor: 										pointer 																	;
-			@media screen and (max-width: 532px){
+			@media screen and (max-width: 547px){
 				display: 									block 																		;
-				//see container__header on 532px of browser size ; add 15px margin right
+				//see container__header on 547px of browser size ; add 15px margin right
 				margin-right: 								15px 																		;
 			}
 			@media screen and (max-width: 269px){
@@ -253,7 +346,7 @@ header{
 				top: 										86px 																		;
 			}
 			&.open{
-				@media screen and (max-width: 532px){
+				@media screen and (max-width: 547px){
 					top: 									20px 																		;
 				}
 				span{
@@ -326,16 +419,22 @@ header{
 	//images PSD exported to JPEG on 75%
 	.header__hero{
 		position: 											relative 																	;
-		top: 												-50px 																		;
+		top: 												-40px 																		;
 		z-index: 											1 																			;
 		@media screen and (max-width: 1399px){
-			top: 											-40px 																		;
+			top: 											-30px 																		;
+		}
+		@media screen and (max-width: 1199px){
+			top: 											-25px 																		;
+		}
+		@media screen and (max-width: 992px){
+			top: 											-28px 																		;
 		}
 		@media screen and (max-width: 767px){
-			top: 											15px 																		;
+			top: 											0px 																		;
 		}
-		@media screen and (max-width: 532px){
-			top: 											-20px 																		;
+		@media screen and (max-width: 547px){
+			top: 											-10px 																		;
 		}
 		@media screen and (max-width: 269px){
 			top: 											10px 																		;
@@ -349,7 +448,7 @@ header{
 			bottom: 										0																			;
 			background: 									linear-gradient(-90deg, rgba(0,0,0,0.4) 0%, rgba(255,255,255,0.4) 100%)		;
 			z-index: 										1																			;
-			@media screen and (max-width: 532px){
+			@media screen and (max-width: 547px){
 				filter: 									brightness(50%)																;
 				-webkit-filter: 							brightness(50%)																;
 			}
@@ -470,14 +569,14 @@ header{
 				@media screen and (max-width: 767px){
 					font-size:								0.6em 																		;
 				}
-				@media screen and (max-width: 532px){
+				@media screen and (max-width: 547px){
 					text-align: 							center 																		;
 					left: 									0 																			;
 					right: 									0 																			;
 				}
 				@media screen and (max-width: 459px){
 					text-align: 							right 																		;
-					padding-right: 							15px 																		;
+					padding-right: 							14px 																		;
 				}
 				@media screen and (max-width: 359px){
 					font-size:								0.4em 																		;
@@ -502,11 +601,7 @@ footer{
 			//padding top and bottom needed to be 30px, but becuase 14px padding is sticked into font : 30 - 14 = 16px
 			padding-top: 									16px 																		;
 			padding-bottom: 								16px 																		;
-			font-size: 										40px 																		;
 			border-top: 									2px solid $white 															;
-			h2{
-				font-size: 									1.0em 																		;
-			}
 		}
 		.footer__collaboration{
 			font-size: 										40px 																		;
@@ -526,14 +621,13 @@ footer{
 				}
 			}
 			ul{
-				font-family: 								$roboto-R 																	;
 				color: 										$white 																		;
 				font-size: 									0.3em 																		;
 				line-height: 								1.5em 																		;
 				li{
 					display: 								inline-block 																;
-					padding-left: 							15px 																		;
-					padding-right: 							15px 																		;
+					padding-left: 							14px 																		;
+					padding-right: 							14px 																		;
 					@media screen and (max-width: 991px){
 						display: 							block 																		;
 						padding-left: 						0px 																		;
@@ -594,6 +688,9 @@ footer{
 				@media screen and (max-width: 233px){
 					font-size: 								0.6em 																		;
 				}
+			}
+			a{
+				display: 									inline-block 																;
 			}
 			.footer__copyright-social{
 				padding-left: 								20px 																		;
@@ -796,13 +893,16 @@ footer{
 	.before-after__car{
 		padding-top: 										20px 																		;
 		padding-bottom: 									20px 																		;
+		&:first-child{
+			padding-top: 									0px 																		;
+		}
 		&.before-after__car__hidden{
 			display: 										none 																		;
 		}
 		@media screen and (max-width: 767px){
 			padding-top: 									60px 																		;
 		}
-		@media screen and (max-width: 532px){
+		@media screen and (max-width: 547px){
 			padding-top: 									0px 																		;
 		}
 		.before-after__car-information{
@@ -812,22 +912,162 @@ footer{
 				padding-top: 								0px 																		;
 				padding-bottom: 							30px 																		;
 			}
-			h2{
-				font-size: 									40px 																		;
-			}
 			a{
-				color: 										$red 																		;
 				padding-top: 								24px 																		;
-				display: 									block 																		;
 			}
-			.before-after__car-information__services{
-				p{
-					&.before-after__car-information__services-bold{
-						padding-top: 						14px 																		;
-						font-family: 						$roboto-B 																	;
-					}
+		}
+	}
+}
+
+
+
+
+.faqs{
+	.faqs__faq{
+		padding-bottom: 									35px 																		;
+		&:last-child{
+			padding-bottom: 								0 																			;
+		}
+	}
+}
+
+
+
+
+.contact{
+	ul{
+		display: 											flex 		 																;
+		@media screen and (max-width: 547px){
+			display: 										block 																		;
+		}
+		li{
+			padding-right: 									50px																		;
+			@media screen and (max-width: 547px){
+				padding-right: 								0px																			;
+				padding-top: 								14px 																		;
+			}
+			&:last-child{
+				padding-right: 								0px 																		;
+			}
+		}
+	}
+}
+
+
+
+.boxes__box{
+	display: 												flex 																		;
+    flex-direction: 										column 																		;
+	.boxes__box-wrapper{
+		display: 											flex 																		;
+		flex-direction: 									column 																		;
+		//the 1 0 0 is for IE
+		flex:  												1 0 0 																		;
+    	box-shadow: 										2px 2px 10px rgba(0, 0, 0, 0.3) 											;
+    	&.boxes__box-wrapper__white{
+    		background-color: 								$white 																		;
+    	}
+    	&.boxes__box-wrapper__black{
+    		background-color: 								$black 																		;
+    		color: 											$white 																		;
+    	}
+		.boxes__box-wrapper__text{
+			padding: 										30px 40px 40px 40px 														;
+			h3{
+				padding-bottom: 							16px 																		;
+			}
+			p{
+				padding-bottom: 							16px 																		;
+			}
+		}
+	}
+	&.boxes__box-p-t-20{
+		padding-top: 										20px 																		;
+	}
+	&.boxes__box-p-b-20{
+		padding-bottom: 									20px 																		;
+	}
+}
+
+
+
+
+.levels{
+	.levels__level{
+		padding-bottom: 									40px 																		;
+		&:last-child{
+			padding-bottom: 								0px 																		;
+		}
+		.levels__level-pre-box{
+			padding-bottom: 								40px 																		;
+		}
+		ul{
+			li{
+				display: 									inline-block 																;
+				padding-right: 								14px 																		;
+				&:last-child{
+					padding-right: 							0px 																		;
 				}
 			}
 		}
 	}
 }
+
+
+
+
+
+.products{
+	.products__product{
+		padding-bottom: 									40px 																		;
+		&:last-child{
+			padding-bottom: 								0px 																		;
+		}
+		.products__product-information{
+			padding: 										30px 50px 50px 50px  														;
+			@media screen and (max-width: 992px){
+				padding: 									0 15px 0 15px 																;
+			}
+		}
+	}
+}
+
+
+
+
+.home-section__black{
+	background-color: 										$black 																		;
+	color: 													$white 																		;
+}
+.home-section{
+	padding-top: 											20px 																		;
+	padding-bottom: 										60px 																		;
+	&:nth-child(2){
+		padding-top: 										0px 																		;
+	}
+	.home-section__product-img{
+		padding-bottom: 									20px 																		;
+	}
+	h1{
+		font-size: 											60px 																		;
+		margin: 											0 																			;
+	}
+}
+
+
+
+
+
+/*=================================================================IF IE================================================================*/
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+	.beer-slider{
+		width: 												100% 																		;
+	}
+	//the @fontface doesn't work on IE for Roboto regular so we use this one
+	//@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+	p,
+	ul{
+		font-family: 										'Roboto', sans-serif 														;
+	}
+}
+/*=================================================================IF IE================================================================*/

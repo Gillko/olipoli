@@ -13,11 +13,26 @@ $(document).ready(function(){
 
 
 	//hamburger navigation
-	$('.header__navigation-hamburger').click(function(){
+	var $header 				= '.header';
+	var $navigationHamburger 	= '.header__navigation-hamburger';
+	var $navigation 			= '.header__navigation';
+
+	$($navigationHamburger).click(function(){
 		$(this).toggleClass('open');
 
-		$('.header__navigation').toggleClass('open');
+		$($navigation).toggleClass('open');
 	});
+
+	$(document).mouseup(function(e) {
+		if (!$($header).is(e.target) // if the target of the click isn't the container...
+		&& $($header).has(e.target).length === 0) // ... nor a descendant of the container
+		{
+			$($navigation).removeClass('open');
+			$($navigationHamburger).removeClass('open');
+		}
+	});
+
+	
 
 	//showing more before after references
 	var $button					= '#button';

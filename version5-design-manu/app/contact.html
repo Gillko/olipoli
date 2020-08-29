@@ -25,9 +25,49 @@
 			</div>
 		</div>
 
+		<main class="main__content">
+			<div class="container">
+				<div class="contact">
+					<h2>How to reach us</h2>
+					<ul>
+						<li>OLIPOLI BV<br>Zaakvoerder: Olivier Mortier</li>
+						<li>Deinsesteenweg 85<br>9031 Drongen</li>
+						<li><a class="a-red" href="tel:0479203169">+32(0)479203169</a><a class="a-red" href="mailto:olivier@olipoli.be">olivier@olipoli.be</a></li>
+					</ul>
+				</div>
+			</div>
+		</main>
+		<div id="map"></div>
+
 		<!--include footer-->
 		<partial src="footer/footer.html"></partial>
 		<!--include footer-->
+
+		<!-- start google maps js -->
+		<script>
+			function initMap(latitude, longitude) {
+				var latitude = 51.0377721;
+				var longitude = 3.6321697;
+				var myLatLng = {lat: parseFloat(latitude), lng: parseFloat(longitude)};
+				var map = new google.maps.Map(document.getElementById('map'), {
+					zoom: 16,
+					center: myLatLng
+
+				});
+				var icon = {
+					url: 'assets/img/icons/icon-maps.png',
+					scaledSize: new google.maps.Size(20, 40),
+				};
+				var marker = new google.maps.Marker({
+					position: myLatLng,
+					map: map,
+					title: 'Olipoli!',
+					icon: icon
+				});
+			}
+		</script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjN7k0oVLfPI5jh9L29xvKjwDOqs4lf50&callback=initMap"></script>
+		<!-- end google maps js -->
 
 	</body>
 </html>
