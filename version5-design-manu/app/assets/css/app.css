@@ -456,6 +456,9 @@ ul {
   font-family: "robotoregular";
   font-size: 14px;
   line-height: 21px; }
+  p.p-t-14,
+  ul.p-t-14 {
+    padding-top: 14px; }
   p li.f-f-r-b,
   ul li.f-f-r-b {
     font-family: "robotobold"; }
@@ -914,7 +917,7 @@ footer.footer {
         footer.footer .footer__collaboration ul li:last-child {
           padding-right: 0px; }
     footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos {
-      padding-top: 10px; }
+      padding-top: 14px; }
       footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
         padding-left: 10px;
         padding-right: 10px; }
@@ -1108,18 +1111,20 @@ footer.footer {
 
 /*==========================================================================FAQS=========================================================*/
 /*==========================================================================CONTACT======================================================*/
-.contact ul {
+.contact > ul {
   display: flex; }
   @media screen and (max-width: 547px) {
-    .contact ul {
+    .contact > ul {
       display: block; } }
-  .contact ul li {
+  .contact > ul li {
     padding-right: 50px; }
     @media screen and (max-width: 547px) {
-      .contact ul li {
+      .contact > ul li {
         padding-right: 0px;
-        padding-top: 14px; } }
-    .contact ul li:last-child {
+        padding-top: 14px; }
+        .contact > ul li:first-child {
+          padding-top: 0px; } }
+    .contact > ul li:last-child {
       padding-right: 0px; }
 
 /*==========================================================================CONTACT======================================================*/
@@ -1145,10 +1150,8 @@ footer.footer {
       color: #fff; }
     .boxes__box .boxes__box-wrapper .boxes__box-wrapper__text {
       padding: 30px 40px 40px 40px; }
-      .boxes__box .boxes__box-wrapper .boxes__box-wrapper__text h3 {
-        padding-bottom: 16px; }
       .boxes__box .boxes__box-wrapper .boxes__box-wrapper__text p {
-        padding-bottom: 16px; }
+        padding-bottom: 14px; }
   .boxes__box.boxes__box-p-t-20 {
     padding-top: 20px; }
   .boxes__box.boxes__box-p-b-20 {
@@ -1157,7 +1160,7 @@ footer.footer {
 /*===========================================================================BOXES=======================================================*/
 /*===========================================================================LEVELS=======================================================*/
 .levels .levels__level {
-  padding-bottom: 40px; }
+  padding-bottom: 60px; }
   .levels .levels__level:last-child {
     padding-bottom: 0px; }
   .levels .levels__level .levels__level-pre-box {
@@ -1185,9 +1188,12 @@ footer.footer {
 .home-section__black {
   background-color: #000;
   color: #fff; }
+  .home-section__black .home__section {
+    padding-top: 60px;
+    padding-bottom: 60px; }
 
 .home-section {
-  padding-top: 20px;
+  padding-top: 60px;
   padding-bottom: 60px; }
   .home-section:nth-child(2) {
     padding-top: 0px; }

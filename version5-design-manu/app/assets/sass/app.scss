@@ -57,6 +57,9 @@ ul{
 	font-family: 											$roboto-R 																	;
 	font-size: 												14px 																		;
 	line-height: 											21px 																		;
+	&.p-t-14{
+		padding-top: 										14px 																		;
+	}
 	li{
 		&.f-f-r-b{
 			font-family:  									$roboto-B 																	;
@@ -642,7 +645,7 @@ footer{
 			}
 			.footer__collaboration-brands{
 				.footer__collaboration-brands__logos{
-					padding-top: 							10px 																		;
+					padding-top: 							14px 																		;
 					img{
 						&.footer__collaborationbrands__logos-logo{
 							padding-left: 					10px 																		;
@@ -942,7 +945,7 @@ footer{
 
 /*==========================================================================CONTACT======================================================*/
 .contact{
-	ul{
+	> ul{
 		display: 											flex 		 																;
 		@media screen and (max-width: 547px){
 			display: 										block 																		;
@@ -952,6 +955,9 @@ footer{
 			@media screen and (max-width: 547px){
 				padding-right: 								0px																			;
 				padding-top: 								14px 																		;
+				&:first-child{
+					padding-top: 							0px 																		;
+				}
 			}
 			&:last-child{
 				padding-right: 								0px 																		;
@@ -991,11 +997,8 @@ footer{
     	}
 		.boxes__box-wrapper__text{
 			padding: 										30px 40px 40px 40px 														;
-			h3{
-				padding-bottom: 							16px 																		;
-			}
 			p{
-				padding-bottom: 							16px 																		;
+				padding-bottom: 							14px 																		;
 			}
 		}
 	}
@@ -1016,7 +1019,7 @@ footer{
 /*===========================================================================LEVELS=======================================================*/
 .levels{
 	.levels__level{
-		padding-bottom: 									40px 																		;
+		padding-bottom: 									60px 																		;
 		&:last-child{
 			padding-bottom: 								0px 																		;
 		}
@@ -1065,9 +1068,13 @@ footer{
 .home-section__black{
 	background-color: 										$black 																		;
 	color: 													$white 																		;
+	.home__section{
+		padding-top: 										60px 																		;
+    	padding-bottom: 									60px 																		;
+	}
 }
 .home-section{
-	padding-top: 											20px 																		;
+	padding-top: 											60px 																		;
 	padding-bottom: 										60px 																		;
 	&:nth-child(2){
 		padding-top: 										0px 																		;
