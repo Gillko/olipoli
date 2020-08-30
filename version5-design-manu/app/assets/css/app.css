@@ -609,8 +609,6 @@ header.header {
             padding-left: 0px;
             padding-right: 0px;
             text-align: center;
-            padding-bottom: 6px;
-            padding-top: 6px;
             line-height: 40px; }
             header.header nav.header__navigation ul li:hover {
               background-color: #c8cc52; } }
@@ -686,7 +684,7 @@ header.header {
         top: 86px; } }
     @media screen and (max-width: 547px) {
       header.header .header__navigation-hamburger.open {
-        top: 20px; } }
+        top: 16px; } }
     header.header .header__navigation-hamburger.open span {
       background: #fff; }
       header.header .header__navigation-hamburger.open span:nth-child(1) {
@@ -904,7 +902,8 @@ footer.footer {
       footer.footer .footer__collaboration ul li {
         display: inline-block;
         padding-left: 14px;
-        padding-right: 14px; }
+        padding-right: 14px;
+        text-decoration: underline; }
         @media screen and (max-width: 991px) {
           footer.footer .footer__collaboration ul li {
             display: block;
@@ -914,34 +913,30 @@ footer.footer {
           padding-left: 0px; }
         footer.footer .footer__collaboration ul li:last-child {
           padding-right: 0px; }
-    @media screen and (max-width: 991px) {
-      footer.footer .footer__collaboration .footer__collaboration-brands {
-        padding-top: 16px; } }
-    footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
-      padding-left: 10px;
-      padding-right: 10px; }
-      footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo:first-child {
-        padding-left: 0px; }
-      footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo:last-child {
-        padding-right: 0px; }
-      @media screen and (max-width: 1199px) {
-        footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
-          padding-left: 0px;
-          padding-right: 0px; } }
-      @media screen and (max-width: 991px) {
-        footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
-          height: 38px; } }
-      @media screen and (max-width: 233px) {
-        footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
-          height: 30px; } }
+    footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos {
+      padding-top: 10px; }
+      footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
+        padding-left: 10px;
+        padding-right: 10px; }
+        footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo:first-child {
+          padding-left: 0px; }
+        footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo:last-child {
+          padding-right: 0px; }
+        @media screen and (max-width: 1199px) {
+          footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
+            padding-left: 0px;
+            padding-right: 0px; } }
+        @media screen and (max-width: 991px) {
+          footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
+            height: 38px; } }
+        @media screen and (max-width: 499px) {
+          footer.footer .footer__collaboration .footer__collaboration-brands .footer__collaboration-brands__logos img.footer__collaborationbrands__logos-logo {
+            height: 32px; } }
   footer.footer .footer__copyright {
     font-size: 40px;
     padding-bottom: 30px;
     display: flex;
     display: -webkit-flex; }
-    @media screen and (max-width: 399px) {
-      footer.footer .footer__copyright {
-        display: block; } }
     footer.footer .footer__copyright h3 {
       font-size: 1.0em;
       color: #fff; }
@@ -951,17 +946,17 @@ footer.footer {
       @media screen and (max-width: 233px) {
         footer.footer .footer__copyright h3 {
           font-size: 0.6em; } }
-    footer.footer .footer__copyright a {
-      display: inline-block; }
-    footer.footer .footer__copyright .footer__copyright-social {
-      padding-left: 20px;
-      padding-top: 5px; }
-      @media screen and (max-width: 399px) {
-        footer.footer .footer__copyright .footer__copyright-social {
-          padding-left: 0px;
-          padding-top: 0px; } }
-      footer.footer .footer__copyright .footer__copyright-social a.footer__copyright-social__link {
-        text-decoration: none; }
+    footer.footer .footer__copyright ul.footer__copyright-social li {
+      display: inline-block;
+      padding-left: 5px; }
+      footer.footer .footer__copyright ul.footer__copyright-social li:first-child {
+        padding-left: 30px; }
+    @media screen and (max-width: 767px) {
+      footer.footer .footer__copyright ul.footer__copyright-social {
+        padding-left: 0px;
+        padding-top: 0px; } }
+    footer.footer .footer__copyright ul.footer__copyright-social a.footer__copyright-social__link {
+      text-decoration: none; }
 
 /*==================================================================FOOTER==============================================================*/
 /*==================================================================SLIDER===============================================================*/
@@ -1004,8 +999,6 @@ footer.footer {
     width: 200%;
     max-width: none;
     height: 100%; }
-  .beer-reveal img:first-child {
-    height: auto; }
 
 .beer-slider[data-beer-label]:after,
 .beer-reveal[data-beer-label]:after {
@@ -1082,6 +1075,7 @@ footer.footer {
   opacity: 1; }
 
 /*==================================================================SLIDER===============================================================*/
+/*=============================================================REFERENCES BEFORE AFTER COLS==============================================*/
 .before-after .before-after__car {
   padding-top: 20px;
   padding-bottom: 20px; }
@@ -1105,11 +1099,15 @@ footer.footer {
     .before-after .before-after__car .before-after__car-information a {
       padding-top: 24px; }
 
+/*=============================================================REFERENCES BEFORE AFTER COLS==============================================*/
+/*==========================================================================FAQS=========================================================*/
 .faqs .faqs__faq {
   padding-bottom: 35px; }
   .faqs .faqs__faq:last-child {
     padding-bottom: 0; }
 
+/*==========================================================================FAQS=========================================================*/
+/*==========================================================================CONTACT======================================================*/
 .contact ul {
   display: flex; }
   @media screen and (max-width: 547px) {
@@ -1124,14 +1122,22 @@ footer.footer {
     .contact ul li:last-child {
       padding-right: 0px; }
 
+/*==========================================================================CONTACT======================================================*/
+/*===========================================================================BOXES=======================================================*/
 .boxes__box {
   display: flex;
   flex-direction: column; }
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    .boxes__box {
+      display: block; } }
   .boxes__box .boxes__box-wrapper {
     display: flex;
     flex-direction: column;
-    flex: 1 0 0;
+    flex: 1;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.3); }
+    @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+      .boxes__box .boxes__box-wrapper {
+        display: block; } }
     .boxes__box .boxes__box-wrapper.boxes__box-wrapper__white {
       background-color: #fff; }
     .boxes__box .boxes__box-wrapper.boxes__box-wrapper__black {
@@ -1148,6 +1154,8 @@ footer.footer {
   .boxes__box.boxes__box-p-b-20 {
     padding-bottom: 20px; }
 
+/*===========================================================================BOXES=======================================================*/
+/*===========================================================================LEVELS=======================================================*/
 .levels .levels__level {
   padding-bottom: 40px; }
   .levels .levels__level:last-child {
@@ -1160,6 +1168,8 @@ footer.footer {
     .levels .levels__level ul li:last-child {
       padding-right: 0px; }
 
+/*===========================================================================LEVELS=======================================================*/
+/*===========================================================================PRODUCTS=====================================================*/
 .products .products__product {
   padding-bottom: 40px; }
   .products .products__product:last-child {
@@ -1170,6 +1180,8 @@ footer.footer {
       .products .products__product .products__product-information {
         padding: 0 15px 0 15px; } }
 
+/*===========================================================================PRODUCTS=====================================================*/
+/*=============================================================================HOME=======================================================*/
 .home-section__black {
   background-color: #000;
   color: #fff; }
@@ -1185,6 +1197,7 @@ footer.footer {
     font-size: 60px;
     margin: 0; }
 
+/*=============================================================================HOME=======================================================*/
 /*=================================================================IF IE================================================================*/
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
   .beer-slider {
